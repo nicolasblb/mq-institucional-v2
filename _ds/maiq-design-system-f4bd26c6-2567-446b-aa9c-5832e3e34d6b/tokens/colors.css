@@ -1,0 +1,42 @@
+:root{
+  /* ---- Brand palette (Guia da Marca, Ago/26) ---- */
+  --sand:#E9E0D1;        /* Areia Nobre */
+  --deep-green:#143737;  /* Verde Profundo */
+  --mint:#91A398;        /* Menta Suave */
+  --botanic:#33605A;     /* Verde Botânico */
+  --wood:#68462B;        /* Madeira de Lei */
+
+  /* ---- Green ramp (derived from Verde Profundo / Botânico / Menta) ---- */
+  --green-950:#0A1D1D;
+  --green-900:#0D2423;
+  --green-800:#143737;
+  --green-700:#1B4442;
+  --green-600:#33605A;
+  --green-500:#487A72;
+  --green-400:#6C948B;
+  --green-300:#91A398;
+  --green-200:#B7C4BC;
+  --green-100:#D6DED8;
+
+  /* ---- Sand ramp (derived from Areia Nobre) ---- */
+  --sand-50:#F7F3EC;
+  --sand-100:#F1EBE0;
+  --sand-200:#E9E0D1;
+  --sand-300:#DCD0BC;
+  --sand-400:#C7B79E;
+  --sand-500:#A9976F;
+
+  /* ---- Wood ramp (derived from Madeira de Lei) ---- */
+  --wood-700:#4C3320;
+  --wood-600:#68462B;
+  --wood-500:#86603E;
+  --wood-400:#A67E58;
+  --wood-300:#C4A57F;
+
+  /* ---- Semantic hues. Success/info reuse brand greens; alert hues are derived
+       in the same warm register as Madeira de Lei (no red exists in the brand book). ---- */
+  --signal-positive:#4E8F6E;
+  --signal-attention:#A6822F;
+  --signal-critical:#9E4A31;
+  --signal-neutral:#6C948B;
+}
