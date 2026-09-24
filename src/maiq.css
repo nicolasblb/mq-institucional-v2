@@ -1,0 +1,1311 @@
+/* Maiq Design System tokens — portados de _ds/tokens/*.css.
+   Escopados em [data-maiq-scope] para nao colidir com os tokens do shadcn. */
+
+/* --- tokens/colors.css --- */
+[data-maiq-scope]{
+  /* ---- Brand palette (Guia da Marca, Ago/26) ---- */
+  --sand:#EAD9CC;        /* Areia Nobre */
+  --deep-green:#143937;  /* Verde Profundo */
+  --mint:#9FD6D2;        /* Menta Suave */
+  --botanic:#308984;     /* Verde Botânico */
+  --wood:#68462B;        /* Madeira de Lei */
+
+  /* ---- Green ramp (derived from Verde Profundo / Botânico / Menta) ---- */
+  --green-950:#09201F;
+  --green-900:#0F2B2A;
+  --green-800:#143937;
+  --green-700:#1F5956;
+  --green-600:#308984;
+  --green-500:#3E9B95;
+  --green-400:#5FC7C1;
+  --green-300:#9FD6D2;
+  --green-200:#AFE3E0;
+  --green-100:#DFF4F3;
+
+  /* ---- Sand ramp (derived from Areia Nobre) ---- */
+  --sand-50:#F9F1EA;
+  --sand-100:#F3E7DE;
+  --sand-200:#EAD9CC;
+  --sand-300:#DEC7B2;
+  --sand-400:#D5B398;
+  --sand-500:#BF8D65;
+
+  /* ---- Wood ramp (derived from Madeira de Lei) ---- */
+  --wood-700:#4E3520;
+  --wood-600:#68462B;
+  --wood-500:#8A6038;
+  --wood-400:#A67549;
+  --wood-300:#BF8D65;
+
+  /* ---- Semantic hues. Success/info reuse brand greens; alert hues are derived
+       in the same warm register as Madeira de Lei (no red exists in the brand book). ---- */
+  --signal-positive:#4E8F6E;
+  --signal-attention:#A6822F;
+  --signal-critical:#9E4A31;
+  --signal-neutral:#5FC7C1;
+}
+
+/* --- tokens/fonts.css --- */
+/* Barlow is the Maiq brand typeface (Google Fonts, carregada no <head> da rota raiz).
+   Peso de referência: Medium 500. */
+
+[data-maiq-scope]{
+  --font-core:"Barlow","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --font-display:var(--font-core);
+  --font-body:var(--font-core);
+  --font-mono:ui-monospace,"SFMono-Regular","Menlo","Consolas",monospace;
+}
+
+/* --- tokens/typography.css --- */
+[data-maiq-scope]{
+  --fs-display-1:72px;   --lh-display-1:1.02; /* @kind other */  --ls-display-1:-0.022em; /* @kind other */
+  --fs-display-2:56px;   --lh-display-2:1.05; /* @kind other */  --ls-display-2:-0.020em; /* @kind other */
+  --fs-h1:40px;          --lh-h1:1.10; /* @kind other */         --ls-h1:-0.016em; /* @kind other */
+  --fs-h2:32px;          --lh-h2:1.16; /* @kind other */         --ls-h2:-0.012em; /* @kind other */
+  --fs-h3:24px;          --lh-h3:1.24; /* @kind other */         --ls-h3:-0.008em; /* @kind other */
+  --fs-h4:20px;          --lh-h4:1.30; /* @kind other */         --ls-h4:-0.004em; /* @kind other */
+  --fs-body-lg:18px;     --lh-body-lg:1.60; /* @kind other */
+  --fs-body:16px;        --lh-body:1.62; /* @kind other */
+  --fs-body-sm:14px;     --lh-body-sm:1.55; /* @kind other */
+  --fs-caption:13px;     --lh-caption:1.45; /* @kind other */
+  --fs-overline:12px;    --lh-overline:1.20; /* @kind other */   --ls-overline:0.14em; /* @kind other */
+  --fs-metric:56px;      --lh-metric:1.00; /* @kind other */     --ls-metric:-0.02em; /* @kind other */
+
+  --fw-light:300; /* @kind font */
+  --fw-regular:400; /* @kind font */
+  --fw-medium:500; /* @kind font */
+  --fw-semibold:600; /* @kind font */
+  --fw-bold:700; /* @kind font */
+
+  --measure-narrow:46ch; /* @kind other */
+  --measure-body:62ch; /* @kind other */
+  --measure-wide:78ch; /* @kind other */
+}
+
+/* --- tokens/spacing.css --- */
+[data-maiq-scope]{
+  --space-0:0px;
+  --space-1:4px;
+  --space-2:8px;
+  --space-3:12px;
+  --space-4:16px;
+  --space-5:20px;
+  --space-6:24px;
+  --space-7:32px;
+  --space-8:40px;
+  --space-9:48px;
+  --space-10:64px;
+  --space-11:80px;
+  --space-12:96px;
+  --space-13:128px;
+  --space-14:160px;
+
+  --gutter-page:24px;
+  --gutter-page-lg:48px;
+  --container-max:1200px;
+  --container-narrow:760px;
+  --section-y:96px;
+  --section-y-lg:128px;
+}
+
+/* --- tokens/radius.css --- */
+[data-maiq-scope]{
+  --radius-none:0px;
+  --radius-xs:3px;
+  --radius-sm:6px;
+  --radius-md:10px;
+  --radius-lg:16px;
+  --radius-xl:24px;
+  --radius-pill:999px;
+  --radius-squircle:24%; /* app-icon mask, matches the brand app tile */
+  --border-hairline:1px;
+  --border-strong:2px;
+}
+
+/* --- tokens/elevation.css --- */
+[data-maiq-scope]{
+  /* Dark-first surfaces get almost no drop shadow — depth comes from hairlines
+     and a faint ambient pool. */
+  --shadow-0:none;
+  --shadow-1:0 1px 2px rgba(7,24,23,.45);
+  --shadow-2:0 8px 24px -10px rgba(7,24,23,.60);
+  --shadow-3:0 24px 64px -20px rgba(7,24,23,.70);
+  --shadow-inset-hairline:inset 0 1px 0 rgba(234,217,204,.06);
+  --glow-focus:0 0 0 3px rgba(159,214,210,.32);
+
+  --scrim-top:linear-gradient(180deg,rgba(9,32,31,.85) 0%,rgba(9,32,31,0) 100%); /* @kind other */
+  --scrim-bottom:linear-gradient(0deg,rgba(9,32,31,.92) 0%,rgba(9,32,31,0) 100%); /* @kind other */
+  --blur-veil:saturate(1.05) blur(18px); /* @kind other */
+}
+
+/* --- tokens/motion.css --- */
+[data-maiq-scope]{
+  --dur-1:120ms; /* @kind other */
+  --dur-2:200ms; /* @kind other */
+  --dur-3:320ms; /* @kind other */
+  --dur-4:560ms; /* @kind other */
+  --ease-standard:cubic-bezier(.2,0,0,1); /* @kind other */
+  --ease-out:cubic-bezier(.16,1,.3,1); /* @kind other */
+  --ease-in-out:cubic-bezier(.4,0,.2,1); /* @kind other */
+  --transition-ui:all var(--dur-2) var(--ease-standard); /* @kind other */
+  --transition-surface:all var(--dur-3) var(--ease-out); /* @kind other */
+}
+
+/* --- tokens/semantic.css --- */
+/* Default scope is the DARK palette (Paleta Escura, 6pm–6am). */
+[data-maiq-scope]{
+  --bg-page:#143737;
+  --bg-page-deep:#0B2120;
+  --bg-elevated:#1A4443;
+  --surface-card:#17403E;
+  --surface-card-hover:#1F5956;
+  --surface-inset:#102E2D;
+  --surface-accent:#308984;
+
+  --text-primary:#DFF4F3;
+  --text-secondary:#AFE3E0;
+  --text-muted:#8FBAB6;
+  --text-inverse:#143737;
+  --text-on-accent:#FFFFFF;
+
+  --border-hair:rgba(175,227,224,.16);
+  --border-mid:rgba(175,227,224,.26);
+  --border-strong-c:rgba(175,227,224,.45);
+  --border-focus:#5FC7C1;
+
+  --action-primary-bg:#5FC7C1;
+  --action-primary-fg:#0B2120;
+  --action-primary-bg-hover:#8AD8D3;
+  --action-primary-bg-active:#3FA49E;
+  --action-secondary-bg:transparent;
+  --action-secondary-fg:#DFF4F3;
+  --action-secondary-border:rgba(175,227,224,.45);
+  --action-ghost-fg:#AFE3E0;
+  --action-ghost-bg-hover:rgba(175,227,224,.10);
+  --action-accent-bg:#308984;
+  --action-accent-fg:#FFFFFF;
+
+  --highlight:#FFFFFF;
+  --link:#AFE3E0;
+  --link-hover:#FFFFFF;
+
+  --state-positive:#4E8F6E;
+  --state-attention:#A6822F;
+  --state-critical:#9E4A31;
+}
+
+/* LIGHT palette (Paleta Clara, 6am–6pm) */
+[data-maiq-scope][data-theme="claro"]{
+  --bg-page:#EAD9CC;
+  --bg-page-deep:#DFC7B4;
+  --bg-elevated:#F2E6DC;
+  --surface-card:#F7EFE8;
+  --surface-card-hover:#FFFFFF;
+  --surface-inset:#E3D0C0;
+  --surface-accent:#68462B;
+
+  --text-primary:#342316;
+  --text-secondary:#4E3520;
+  --text-muted:#8A5F3C;
+  --text-inverse:#EAD9CC;
+  --text-on-accent:#F2E6DC;
+
+  --border-hair:rgba(52,35,22,.14);
+  --border-mid:rgba(52,35,22,.22);
+  --border-strong-c:rgba(52,35,22,.40);
+  --border-focus:#8A5F3C;
+
+  --action-primary-bg:#342316;
+  --action-primary-fg:#F2E6DC;
+  --action-primary-bg-hover:#4E3520;
+  --action-primary-bg-active:#241810;
+  --action-secondary-bg:transparent;
+  --action-secondary-fg:#342316;
+  --action-secondary-border:rgba(52,35,22,.40);
+  --action-ghost-fg:#4E3520;
+  --action-ghost-bg-hover:rgba(52,35,22,.06);
+  --action-accent-bg:#68462B;
+  --action-accent-fg:#F2E6DC;
+
+  --highlight:#8A5F3C;
+  --link:#4E3520;
+  --link-hover:#8A5F3C;
+
+  --shadow-1:0 1px 2px rgba(52,35,22,.10);
+  --shadow-2:0 10px 28px -14px rgba(52,35,22,.22);
+  --shadow-3:0 28px 70px -26px rgba(52,35,22,.28);
+  --glow-focus:0 0 0 3px rgba(138,95,60,.28);
+}
+
+/* --- estilos globais da pagina (helmet do original) --- */
+body{margin:0;background:#0F2B2A;transition:background 320ms cubic-bezier(.16,1,.3,1)}a{color:#EAD9CC;text-decoration:none}a:hover{color:var(--p-text,#FFFFFF)}
+[data-maiq-scope]{
+--p-bg:#0F2B2A;--p-hero-bg:#143937;--p-card:#1F5956;--p-footer-bg:#09201F;--p-bg-deep:#09201F;--p-plat-video-bg:#153738;--p-tool-filter:brightness(0) invert(1);--p-helix:rgba(159,214,210,.6);--p-helix-hi:rgba(255,255,255,.92);--p-helix-dim:rgba(159,214,210,.16);
+--p-model-base:#09201F;--p-model-edge:rgba(48,137,132,.42);--p-model-core:rgba(159,214,210,.30);--p-model-wave:rgba(223,244,243,.18);
+--p-model-block-edge:#0F2B2A;--p-model-block-center:#143937;--p-platform-block-edge:#143937;--p-platform-block-center:#09201F;--p-divider-solid:#3E9B95;
+--p-text:#FFFFFF;--p-text-2:#AFE3E0;--p-muted:#9FD6D2;--p-subhead:#FFFFFF;
+--p-hair:rgba(159,214,210,.22);--p-hair-soft:rgba(159,214,210,.12);--p-mid:rgba(159,214,210,.34);
+--p-chip-bg:rgba(159,214,210,.05);--p-chip-bg-strong:rgba(159,214,210,.16);--p-ring:#DFF4F3;--p-ring-glow:rgba(223,244,243,.40);--p-net-ink:159,214,210;--p-net-neb:48,137,132;--p-net-op:.70;--p-net-blend:lighter;--p-plat-veil:rgba(9,32,31,.46);--p-chip-text:#DFF4F3;
+--p-header-bg:rgba(20,57,55,.72);--p-header-shadow:0 10px 40px rgba(6,22,21,.35);
+--p-orb:rgba(159,214,210,.54);--p-orb-2:rgba(159,214,210,.20);--p-orb-0:rgba(159,214,210,0);--p-flash:rgba(223,244,243,.95);--p-flash-2:rgba(223,244,243,.34);
+--p-core-blend:plus-lighter;--p-halo-blend:plus-lighter;--p-shade-blend:normal;
+--p-halo:rgba(159,214,210,.30);--p-halo-2:rgba(159,214,210,.14);--p-halo-0:rgba(159,214,210,0);--p-shade:rgba(159,214,210,0);--p-shade-0:rgba(159,214,210,0);
+--p-vol-accent:rgba(48,137,132,.76);--p-vol-accent-2:rgba(48,137,132,.26);
+--p-vol-shadow:rgba(48,137,132,.72);--p-vol-shadow-2:rgba(48,137,132,.24);
+--p-vol-mint:rgba(159,214,210,.34);--p-vol-mint-2:rgba(159,214,210,.11);
+--p-vol-deep:rgba(159,214,210,.30);--p-vol-deep-2:rgba(159,214,210,.10);
+--p-vignette:rgba(5,18,17,.26);--p-fade:rgba(20,57,55,0);
+--p-mark-1:#9FD6D2;--p-mark-2:#308984;--p-hair-strong:rgba(175,227,224,.46);--p-toggle-thumb:rgba(255,255,255,.14);--p-h1:#FFFFFF;--p-overlay-shadow:0 -30px 60px -18px rgba(5,18,17,.62);
+--p-band-bg:#FFFFFF;--p-band-text:#143937;--p-band-overline:#308984;--p-band-btn-bg:#143937;--p-band-btn-fg:#FFFFFF;
+--p-band-vol-shadow:rgba(20,57,55,.20);--p-band-vol-shadow-2:rgba(20,57,55,.06);
+--p-band-vol-accent:rgba(48,137,132,.16);--p-band-vol-accent-2:rgba(48,137,132,.05);
+--p-band-vol-light:rgba(255,252,246,.5);--p-band-vol-light-2:rgba(255,252,246,.14);
+--p-band-fade:rgba(255,255,255,0);
+--p-cta-bg:#FFFFFF;--p-cta-fg:#143937;--p-cta-bg-hover:#DFF4F3;--p-cta-bg-active:#AFE3E0;
+}
+[data-maiq-scope][data-theme="claro"]{
+--p-bg:#EEE0D4;--p-hero-bg:#E0CBB8;--p-card:#F9F1EA;--p-footer-bg:#E0CBB8;--p-bg-deep:#E3CFBC;--p-plat-video-bg:#EAD9CD;--p-tool-filter:brightness(0);--p-helix:rgba(104,70,43,.5);--p-helix-hi:rgba(52,35,22,.9);--p-helix-dim:rgba(104,70,43,.12);
+--p-model-base:#F3E7DE;--p-model-edge:rgba(191,141,101,.26);--p-model-core:rgba(255,253,248,.85);--p-model-wave:rgba(104,70,43,.20);
+--p-model-block-edge:#EEE0D4;--p-model-block-center:#F9F1EA;--p-platform-block-edge:#F9F1EA;--p-platform-block-center:#E0CBB8;--p-divider-solid:#B39C88;
+--p-text:#342316;--p-text-2:#68462B;--p-muted:#8A6038;--p-subhead:#8A6038;
+--p-hair:rgba(104,70,43,.18);--p-hair-soft:rgba(104,70,43,.10);--p-mid:rgba(104,70,43,.30);
+--p-chip-bg:rgba(255,253,248,.20);--p-chip-bg-strong:rgba(104,70,43,.10);--p-ring:#68462B;--p-ring-glow:rgba(104,70,43,.26);--p-net-ink:104,70,43;--p-net-neb:138,96,56;--p-net-op:.40;--p-net-blend:multiply;--p-plat-veil:rgba(249,241,234,.52);--p-chip-text:#342316;
+--p-header-bg:rgba(249,241,234,.80);--p-header-shadow:0 10px 40px rgba(52,35,22,.14);
+--p-orb-blend:screen;--p-core-blend:screen;--p-halo-blend:screen;--p-shade-blend:multiply;
+--p-orb:rgba(255,253,248,.95);--p-orb-2:rgba(249,241,234,.50);--p-orb-0:rgba(249,241,234,0);
+--p-halo:rgba(255,251,242,.58);--p-halo-2:rgba(250,240,222,.30);--p-halo-0:rgba(250,240,222,0);
+--p-shade:rgba(104,70,43,.30);--p-shade-0:rgba(104,70,43,0);
+--p-flash:rgba(255,253,248,.95);--p-flash-2:rgba(255,248,236,.34);
+--p-vol-accent:rgba(255,253,247,1);--p-vol-accent-2:rgba(255,253,247,.40);
+--p-vol-shadow:rgba(255,252,244,.96);--p-vol-shadow-2:rgba(255,252,244,.38);
+--p-vol-mint:rgba(255,246,226,.88);--p-vol-mint-2:rgba(255,246,226,.30);
+--p-vol-deep:rgba(255,248,232,.86);--p-vol-deep-2:rgba(255,248,232,.28);
+--p-vignette:rgba(52,35,22,.10);--p-fade:rgba(224,203,184,0);
+--p-mark-1:#68462B;--p-mark-2:#BF8D65;--p-hair-strong:rgba(104,70,43,.42);--p-toggle-thumb:rgba(52,35,22,.10);--p-h1:var(--wood,#68462B);--p-overlay-shadow:0 -30px 60px -18px rgba(52,35,22,.26);
+--p-band-bg:#143937;--p-band-text:#EAD9CC;--p-band-overline:#9FD6D2;--p-band-btn-bg:#EAD9CC;--p-band-btn-fg:#143937;
+--p-band-vol-shadow:rgba(5,18,17,.62);--p-band-vol-shadow-2:rgba(5,18,17,.2);
+--p-band-vol-accent:rgba(48,137,132,.55);--p-band-vol-accent-2:rgba(48,137,132,.16);
+--p-band-vol-light:rgba(159,214,210,.20);--p-band-vol-light-2:rgba(159,214,210,.06);
+--p-band-fade:rgba(20,57,55,0);
+--p-cta-bg:#68462B;--p-cta-fg:#F3E7DE;--p-cta-bg-hover:#7A5334;--p-cta-bg-active:#543619;
+}
+.maiq-required-legend{
+  margin:0;
+  color:var(--p-muted);
+  font-size:12px;
+  line-height:1.4;
+}
+.maiq-odometer{display:inline-flex;align-items:baseline;white-space:nowrap}
+.maiq-odometer-prefix{display:inline-block;margin-right:.12em}
+.maiq-odometer-digits{display:inline-flex;align-items:flex-start}
+.maiq-odometer-digit{display:inline-block;width:.61em;height:1em;overflow:hidden;line-height:1;contain:layout paint}
+.maiq-odometer-strip{display:flex;flex-direction:column;will-change:transform;transform:translate3d(0,calc(var(--maiq-odo-step,0) * -1em),0)}
+.maiq-odometer-strip>span{display:block;flex:0 0 1em;height:1em;line-height:1;text-align:center}
+.maiq-required-legend span{color:var(--p-required,var(--state-attention))}
+.maiq-message-textarea{
+  height:112px!important;
+  min-height:88px;
+  resize:vertical;
+  padding:12px 14px!important;
+  line-height:1.5;
+}
+.maiq-form-scroll{scrollbar-width:thin;scrollbar-color:var(--p-muted) var(--p-chip-bg)}
+.maiq-form-scroll::-webkit-scrollbar{width:8px;height:8px}
+.maiq-form-scroll::-webkit-scrollbar-track{background:var(--p-chip-bg);border-radius:var(--radius-pill)}
+.maiq-form-scroll::-webkit-scrollbar-thumb{background:var(--p-muted);border:2px solid var(--p-card);border-radius:var(--radius-pill)}
+.maiq-faq{
+  flex:1 1 auto;
+  display:flex;
+  align-items:center;
+  min-height:0;
+  overflow:hidden;
+  scroll-margin-top:132px;
+  padding:clamp(108px,13vh,132px) clamp(24px,5vw,48px) clamp(28px,4vh,44px);
+  border-top:1px solid var(--p-hair);
+  background:var(--p-bg);
+}
+
+.maiq-faq-inner{
+  width:100%;
+  height:100%;
+  min-height:0;
+  max-width:1200px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:minmax(240px,1fr) minmax(0,2fr);
+  gap:clamp(56px,8vw,112px);
+  align-items:stretch;
+}
+.maiq-faq-intro{display:flex;flex-direction:column;align-items:flex-start}
+.maiq-faq-intro h2{
+  margin:0;
+  color:var(--p-text);
+  font-family:var(--font-core);
+  font-size:clamp(38px,4.2vw,58px);
+  font-weight:var(--fw-semibold);
+  line-height:1.04;
+  letter-spacing:0;
+ }
+ .maiq-faq-sub{
+   margin:14px 0 0;
+   color:var(--p-muted);
+   font-family:var(--font-core);
+   max-width:none;
+   text-wrap:pretty;
+ }
+ .maiq-faq-contact{
+  margin-top:32px;
+  background:var(--p-cta-bg)!important;
+  color:var(--p-cta-fg)!important;
+  font-family:var(--font-core)!important;
+}
+.maiq-faq-contact:hover{
+  background:var(--p-cta-bg-hover)!important;
+}
+.maiq-faq-contact:active{
+  background:var(--p-cta-bg-active)!important;
+}
+.maiq-faq-list{
+  min-height:0;
+  overflow-y:auto;
+  overscroll-behavior:auto;
+  padding-right:clamp(8px,1.2vw,16px);
+  border-top:1px solid var(--p-hair);
+  scrollbar-width:thin;
+  scrollbar-color:var(--p-hair-strong) transparent;
+}
+.maiq-faq-list::-webkit-scrollbar{width:6px}
+.maiq-faq-list::-webkit-scrollbar-track{background:transparent}
+.maiq-faq-list::-webkit-scrollbar-thumb{border-radius:var(--radius-pill);background:var(--p-hair-strong)}
+.maiq-faq-item{border-bottom:1px solid var(--p-hair)}
+.maiq-faq-trigger{
+  width:100%!important;
+  height:auto!important;
+  min-height:88px;
+  padding:24px 8px!important;
+  justify-content:space-between!important;
+  gap:24px!important;
+  border-radius:var(--radius-sm)!important;
+  color:var(--p-text)!important;
+  white-space:normal!important;
+  text-align:left;
+}
+.maiq-faq-trigger>span:first-child{
+  font-family:var(--font-core);
+  font-size:var(--fs-h4);
+  font-weight:var(--fw-semibold);
+  line-height:var(--lh-h4);
+  letter-spacing:0;
+}
+.maiq-faq-icon{
+  flex:0 0 30px;
+  width:30px;
+  height:30px;
+  display:grid;
+  place-items:center;
+  border:1px solid var(--p-mid);
+  border-radius:var(--radius-pill);
+  color:var(--p-muted);
+  transition:color var(--dur-2) var(--ease-standard),border-color var(--dur-2) var(--ease-standard),transform var(--dur-3) var(--ease-out);
+}
+.maiq-faq-trigger:hover .maiq-faq-icon,.maiq-faq-trigger:focus-visible .maiq-faq-icon{color:var(--p-text);border-color:var(--p-text)}
+.maiq-faq-item[data-open="true"] .maiq-faq-icon{transform:rotate(180deg)}
+.maiq-faq-answer{
+  display:grid;
+  grid-template-rows:0fr;
+  opacity:0;
+  transition:grid-template-rows var(--dur-3) var(--ease-out),opacity var(--dur-2) var(--ease-standard);
+}
+.maiq-faq-answer>div{min-height:0;overflow:hidden}
+.maiq-faq-answer p{
+  max-width:62ch;
+  margin:0;
+  padding:0 58px 30px 8px;
+  color:var(--p-text-2);
+  font-family:var(--font-core);
+  font-size:var(--fs-body);
+  font-weight:var(--fw-regular);
+  line-height:var(--lh-body);
+  letter-spacing:0;
+}
+.maiq-faq-answer[data-visible="true"]{grid-template-rows:1fr;opacity:1}
+@media (max-width:800px){
+  .maiq-faq{padding:96px 24px 24px}
+  .maiq-faq-inner{grid-template-columns:1fr;grid-template-rows:auto minmax(0,1fr);gap:28px}
+  .maiq-faq-intro{align-items:center;text-align:center}
+  .maiq-faq-sub-break{display:none}
+  .maiq-faq-contact{margin-top:20px}
+  .maiq-faq-trigger{min-height:76px;padding:20px 4px!important}
+  .maiq-faq-answer p{padding:0 42px 24px 4px}
+}
+/* Altura curta: .maiq-final-content tem height:100svh fixo (alimenta
+   _fitFinal, não pode mudar) e sobra pouco miolo para a lista de FAQ, que
+   tem scroll próprio dentro de um estágio sticky — aliviar os paddings
+   internos reduz a chance de precisar desse scroll aninhado. */
+@media (max-height:750px){
+  .maiq-faq{padding:clamp(80px,13vh,132px) clamp(24px,5vw,48px) clamp(16px,4vh,44px)}
+  .maiq-faq-trigger{min-height:64px;padding:14px 8px!important}
+}
+@media (prefers-reduced-motion:reduce){.maiq-faq-answer,.maiq-faq-icon{transition:none}}
+.maiq-footer-top{
+  max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;
+  align-items:flex-start;gap:clamp(32px,6vw,96px);flex-wrap:wrap;
+}
+.maiq-footer-cols{display:flex;gap:clamp(40px,7vw,96px);flex-wrap:wrap}
+.maiq-footer-col{display:flex;flex-direction:column;gap:10px}
+.maiq-footer-col-title{
+  margin:0;font-family:var(--font-core);font-size:13px;font-weight:600;
+  letter-spacing:.09em;text-transform:uppercase;color:var(--p-text);opacity:.72;
+}
+.maiq-footer-link{
+  font-family:var(--font-core);font-size:14px;line-height:1.5;color:var(--p-muted);
+  text-decoration:none;transition:color var(--dur-2,220ms) var(--ease-out,cubic-bezier(.16,1,.3,1));
+}
+.maiq-footer-link:hover,.maiq-footer-link:focus-visible{color:var(--p-text)}
+@media (max-width:640px){
+  .maiq-footer-cols{width:100%;justify-content:space-between;gap:32px}
+  .maiq-footer{padding:21px 24px 13px!important}
+  .maiq-footer-top{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:start;gap:24px}
+  .maiq-footer-cols{width:auto;justify-content:end;gap:24px}
+  .maiq-footer-col{gap:6px}
+  .maiq-footer-col-title{font-size:11px}
+  .maiq-footer-link{font-size:12px}
+  .maiq-footer-top+div{margin-top:18px!important;padding-top:11px!important;font-size:11px!important}
+}
+
+.maiq-conviction{
+  position:relative;
+  z-index:1;
+  padding:clamp(104px,13vh,150px) 48px clamp(72px,9vh,112px);
+}
+.maiq-conviction-inner{width:100%;max-width:1200px;margin:0 auto}
+.maiq-conviction-head{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+.maiq-conviction-head h2{
+  margin:0;
+  color:var(--p-text);
+  font-family:var(--font-core);
+  font-size:clamp(38px,4.2vw,58px);
+  font-weight:var(--fw-semibold);
+  line-height:1.04;
+  letter-spacing:-.022em;
+}
+.maiq-conviction-head h3{
+  max-width:none;
+  margin:14px 0 0;
+  color:var(--p-muted);
+  font-family:var(--font-core);
+  font-weight:var(--fw-regular);
+  letter-spacing:0;
+  text-wrap:pretty;
+}
+.maiq-section-subhead{
+  color:var(--p-subhead)!important;
+  font-family:var(--font-core);
+  font-size:clamp(15.2px,1.68vw,23px);
+  font-weight:var(--fw-regular);
+  line-height:1.24;
+  letter-spacing:0;
+}
+.maiq-hero-subhead{
+  color:var(--p-subhead)!important;
+  font-family:var(--font-core);
+  font-size:clamp(24px,2.76vw,41px);
+  font-weight:var(--fw-regular);
+  line-height:1.24;
+  letter-spacing:0;
+}
+.maiq-subhead-break::before{content:" "}
+/* Altura curta: o piso de 140px do padding-top só encolhe de verdade acima
+   de 1120px de altura de viewport (clamp com 12.5vh); abaixo disso o topo
+   do hero (slot da logo) fica perto demais do header. padding-top é estilo
+   inline, por isso o !important. */
+@media (max-height:760px){
+  .maiq-hero{padding-top:96px !important}
+}
+/* Altura curta: "Nosso Modelo" e "Nossa Convicção" não fazem parte da
+   pilha sticky (ficam dentro de .maiq-primary-overlay, que rola em fluxo
+   normal), então encurtar aqui é só respiro visual — não afeta _fitNet. */
+@media (max-height:860px){
+  .maiq-model-section{padding-top:clamp(64px,9vh,104px) !important;padding-bottom:clamp(20px,3vh,36px) !important}
+  .maiq-model-inner{gap:clamp(16px,2.4vh,32px) !important}
+  .maiq-model-tools-row{padding-top:10px !important;padding-bottom:10px !important}
+  .maiq-conviction{padding-top:clamp(64px,9vh,104px) !important;padding-bottom:clamp(40px,5vh,64px) !important}
+  .maiq-conviction-body{margin-top:clamp(24px,4vh,48px) !important}
+  .maiq-team-band{margin-top:clamp(32px,5vh,64px) !important}
+}
+/* O vídeo só ganha altura fixa em janelas largas e baixas (desktop/tablet);
+   em telas estreitas o layout empilhado (max-width:800px) já usa
+   aspect-ratio:16/9 sobre a largura total, que é mais compacto do que
+   qualquer altura fixa em vh — sobrepor lá alongaria o vídeo no celular. */
+@media (max-height:860px) and (min-width:801px){
+  .maiq-conviction-player{height:42vh}
+}
+@media (max-width:820px){
+  .maiq-subhead-break-model,.maiq-subhead-break-perspective{display:block}
+  .maiq-subhead-break-model::before,.maiq-subhead-break-perspective::before{content:none}
+}
+@media (max-width:700px){
+  .maiq-subhead-break-conviction{display:block}
+  .maiq-subhead-break-conviction::before{content:none}
+}
+@media (max-width:560px){
+  .maiq-subhead-break-platform{display:block}
+  .maiq-subhead-break-platform::before{content:none}
+}
+@media (max-width:640px){
+  .maiq-subhead-break-team{display:block}
+  .maiq-subhead-break-team::before{content:none}
+}
+/* A faixa de logos de LLM em "Nosso Modelo" tinha min-width:520px inline
+   (pensada para o layout desktop) — em telas mais estreitas isso forçava a
+   faixa a estourar a largura da viewport, cortando as últimas logos. */
+@media (max-width:640px){
+  .maiq-model-tools-row{width:100% !important;min-width:0 !important;gap:16px 28px !important}
+}
+.maiq-conviction-body{
+  display:flex;
+  align-items:center;
+  gap:clamp(40px,6vw,72px);
+  margin-top:clamp(40px,6vh,72px);
+}
+.maiq-conviction-lede{
+  position:relative;
+  flex:0 1 380px;
+  margin:0;
+  padding:8px 0 8px 26px;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+}
+.maiq-conviction-lede::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  bottom:0;
+  width:1px;
+  background:linear-gradient(180deg,transparent 0,var(--p-hair) 18%,var(--p-hair) 82%,transparent 100%);
+}
+.maiq-conviction-lede p{
+  margin:0;
+  color:var(--p-text-2);
+  font-family:var(--font-core);
+  font-size:17px;
+  font-weight:var(--fw-regular);
+  line-height:1.6;
+  letter-spacing:0;
+  text-wrap:pretty;
+}
+.maiq-conviction-lede p:first-child{
+  color:var(--p-text);
+}
+.maiq-conviction-player-wrap{
+  flex:1 1 auto;
+  min-width:0;
+  margin:0;
+}
+.maiq-conviction-player{
+  position:relative;
+  width:100%;
+  aspect-ratio:16/9;
+  overflow:hidden;
+  border:1px solid var(--p-hair-strong);
+  border-radius:var(--radius-lg);
+  background:var(--p-bg-deep);
+  box-shadow:var(--shadow-2);
+}
+.maiq-conviction-video{
+  position:absolute;
+  inset:0;
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity var(--dur-3) var(--ease-out);
+}
+.maiq-conviction-video[data-active="true"]{opacity:1}
+
+.maiq-conviction-controls{
+  position:absolute;
+  z-index:2;
+  left:20px;
+  right:20px;
+  bottom:20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+}
+.maiq-conviction-controls-group{display:flex;align-items:center;gap:8px}
+.maiq-conviction-skip{gap:2px!important}
+.maiq-conviction-skip span{font-size:10px;font-weight:var(--fw-semibold);line-height:1}
+.maiq-conviction-modal{position:fixed;z-index:71;inset:clamp(18px,4vw,54px);max-width:1440px;max-height:calc(100vh - clamp(36px,8vw,108px));aspect-ratio:16/9;margin:auto;padding:0;overflow:hidden;border:1px solid var(--p-hair-strong);border-radius:var(--radius-lg);background:var(--p-bg-deep);box-shadow:var(--shadow-3);color:var(--p-text);animation:maiqPlatformModalIn 260ms var(--ease-out)}
+.maiq-conviction-modal-media{position:relative;width:100%;height:100%;overflow:hidden;background:var(--p-plat-video-bg,var(--p-bg-deep))}
+/* Na tela cheia o vídeo aparece inteiro (contain): em celular a área tem a proporção da tela
+   (~19,5:9), e cover cortava as bordas. As sobras usam a cor da borda do vídeo
+   (--p-plat-video-bg, a mesma dos vídeos da Plataforma), sem faixa visível. */
+.maiq-conviction-modal .maiq-conviction-video{object-fit:contain}
+@media (max-width:800px){
+  .maiq-conviction{padding:96px 24px 72px}
+  .maiq-conviction-body{flex-direction:column;align-items:stretch;gap:28px;margin-top:40px}
+  .maiq-conviction-lede{flex:none}
+  .maiq-conviction-player-wrap{width:100%}
+  .maiq-conviction-player{aspect-ratio:16/9;border-radius:var(--radius-md)}
+  .maiq-conviction-controls{right:12px;left:12px;bottom:12px}
+  .maiq-conviction-modal{inset:10px;max-height:calc(100vh - 20px);max-height:calc(100dvh - 20px);border-radius:var(--radius-md)}
+}
+/* Vídeo maximizado em celular portrait: sem screen.orientation.lock/Fullscreen
+   API nativa (iOS Safari não suporta orientation.lock), o modal vira
+   fullscreen edge-to-edge e o conteúdo interno (vídeo + controles) é
+   rotacionado 90° via CSS para simular paisagem. Se o aparelho já estiver
+   fisicamente em paisagem, esta media query não bate e o modal segue no
+   comportamento 16:9 centralizado de sempre (regra acima). */
+@media (max-width:800px) and (orientation:portrait){
+  .maiq-conviction-modal{
+    inset:0;
+    max-width:none;
+    max-height:none;
+    aspect-ratio:auto;
+    margin:0;
+    border:none;
+    border-radius:0;
+    background:var(--p-plat-video-bg,var(--p-bg-deep));
+  }
+  /* 100dvh: no celular, 100vh inclui a área da barra do navegador e a faixa girada
+     passava da tela, cortando as pontas. 100vh fica como fallback. */
+  .maiq-conviction-modal-media{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:100vh;
+    width:100dvh;
+    height:100vw;
+    transform:translate(-50%,-50%) rotate(90deg);
+  }
+}
+.maiq-conviction-rotate-hint{
+  position:absolute;
+  z-index:3;
+  top:16px;
+  left:50%;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 14px;
+  transform:translateX(-50%);
+  border-radius:var(--radius-pill,999px);
+  background:var(--p-bg-deep,#09201F);
+  color:var(--p-text,#EAD9CC);
+  font-family:var(--font-core);
+  font-size:13px;
+  font-weight:var(--fw-medium,500);
+  box-shadow:var(--shadow-3);
+  opacity:0;
+  pointer-events:none;
+  transition:opacity var(--dur-2) var(--ease-standard);
+}
+.maiq-conviction-rotate-hint[data-visible="true"]{opacity:1}
+@media (prefers-reduced-motion:reduce){.maiq-conviction-rotate-hint{transition:none}}
+@media (prefers-reduced-motion:reduce){.maiq-conviction-video{transition:none}.maiq-conviction-modal{animation:none}}
+
+.maiq-model-pilares-bg{
+  isolation:isolate;
+  overflow:hidden;
+  background:linear-gradient(180deg,var(--p-model-block-edge) 0%,var(--p-model-block-center) 50%,var(--p-model-block-edge) 100%);
+  transition:background var(--dur-3) var(--ease-out);
+}
+.maiq-model-pilares-bg::before,
+.maiq-model-pilares-bg::after{
+  content:none;
+}
+.maiq-model-pilares-bg > section{position:relative;z-index:1}
+.maiq-nav-dropdown-item{color:inherit;background:transparent;outline:none}
+/* Menu compacto (<1024px): "Sobre nós" e "Insights" são outras páginas, não seções da Home */
+.maiq-nav-dropdown-item--page{font-weight:var(--fw-semibold,600)}
+.maiq-nav-dropdown-separator--fade{background-image:linear-gradient(90deg,transparent 0%,var(--p-hair-strong) 20%,var(--p-hair-strong) 80%,transparent 100%)!important}
+.maiq-nav-dropdown-item:hover,.maiq-nav-dropdown-item:focus-visible{color:var(--p-text)!important;background:var(--p-chip-bg-strong)!important}
+.maiq-platform-ciclo-bg{background:linear-gradient(180deg,var(--p-platform-block-edge) 0%,var(--p-platform-block-center) 50%,var(--p-platform-block-edge) 100%);transition:background var(--dur-3) var(--ease-out)}
+.maiq-platform-transition{background:var(--p-platform-block-edge)}
+.maiq-scroll-stack{position:relative;z-index:1;background:var(--p-platform-block-edge)}
+.maiq-platform-base{position:sticky;z-index:0;overflow:clip}
+.maiq-primary-overlay{position:relative;z-index:2;overflow:clip;border:1px solid var(--p-hair);border-radius:24px;background:var(--p-bg);box-shadow:var(--p-overlay-shadow),0 30px 60px -18px color-mix(in oklab,var(--p-bg-deep) 72%,transparent);transition:background var(--dur-3) var(--ease-out)}
+.maiq-platform-hold{position:relative;z-index:0;pointer-events:none}
+.maiq-final-reveal-stage{position:relative;z-index:3}
+.maiq-final-base{position:sticky;z-index:0;overflow:clip;clip-path:inset(24px 0 0);background:linear-gradient(180deg,var(--p-platform-block-edge) 0%,var(--p-platform-block-center) 50%,var(--p-platform-block-edge) 100%);transition:background var(--dur-3) var(--ease-out)}
+.maiq-final-content{display:flex;height:100svh;min-height:0;overflow:hidden;flex-direction:column;background:linear-gradient(180deg,var(--p-platform-block-edge) 0%,var(--p-platform-block-center) 50%,var(--p-platform-block-edge) 100%);transition:background var(--dur-3) var(--ease-out)}
+.maiq-cycle-domains-overlay{position:relative;z-index:2;overflow:clip;border:1px solid var(--p-hair);border-radius:24px;background:var(--p-bg);box-shadow:var(--p-overlay-shadow),0 30px 60px -18px color-mix(in oklab,var(--p-bg-deep) 72%,transparent);transition:background var(--dur-3) var(--ease-out)}
+.maiq-final-hold{position:relative;z-index:0;pointer-events:none}
+/* Faixa label + carrossel mais próxima do conteúdo central da seção (antes 96px fixos) */
+.maiq-team-band{display:flex;flex-direction:column;align-items:center;margin-top:clamp(40px,5.5vh,64px)}
+.maiq-team-band-label{max-width:560px;margin:0 auto clamp(16px,2.2vh,22px);color:var(--p-text-2);font-family:var(--font-core);font-size:var(--fs-body-sm);font-weight:var(--fw-regular);line-height:var(--lh-body-sm);text-align:center}
+/* Divisória entre o rótulo e as logos — só no mobile (ver @media 760px abaixo). */
+/* Divisória com fade nas pontas entre a label e o carrossel (todas as larguras) */
+.maiq-team-band-divider{display:block;width:min(560px,75%);height:1px;margin:0 auto clamp(14px,2vh,20px);background:linear-gradient(90deg,transparent 0%,var(--p-hair,rgba(159,214,210,.14)) 18%,var(--p-hair,rgba(159,214,210,.14)) 82%,transparent 100%)}
+.maiq-team-marquee{position:relative;width:75%;margin:0 auto;overflow:hidden;mask-image:linear-gradient(90deg,transparent 0%,black 8%,black 92%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,transparent 0%,black 8%,black 92%,transparent 100%)}
+.maiq-team-logo-track{display:flex;width:max-content;will-change:transform;animation:maiqTeamMarquee 25s linear infinite;animation-play-state:paused}
+.maiq-team-logo-track[data-active="true"]{animation-play-state:running}
+.maiq-team-logo-group{display:flex;flex:none;align-items:center}
+.maiq-team-logo{display:flex;width:clamp(164px,16vw,204px);height:64px;flex:none;align-items:center;justify-content:center;padding:0 clamp(20px,2.5vw,32px);box-sizing:border-box;opacity:.56;transition:opacity 220ms var(--ease-out)}
+.maiq-team-logo:hover{opacity:1}
+.maiq-team-logo img{display:block;width:auto;max-width:100%;height:auto;max-height:32px;object-fit:contain}
+.maiq-team-logo--tr img{max-height:42px}
+/* Uma imagem por tema (branca no noturno, original no diurno) — sem filtro de cor */
+.maiq-team-logo .maiq-team-logo-dia{display:none}
+[data-theme="claro"] .maiq-team-logo .maiq-team-logo-noite{display:none}
+[data-theme="claro"] .maiq-team-logo .maiq-team-logo-dia{display:block}
+@keyframes maiqTeamMarquee{to{transform:translate3d(-50%,0,0)}}
+@media(max-width:800px){.maiq-team-band{margin-top:var(--space-8,40px)}.maiq-team-logo{width:152px;padding:0 22px}.maiq-team-logo img{max-height:27px}.maiq-team-logo--tr img{max-height:35px}}
+@media(max-width:760px){.maiq-team-band-label{margin-bottom:20px}.maiq-team-band-divider{width:75%;margin-bottom:20px}}
+@media(prefers-reduced-motion:reduce){.maiq-team-logo-track{animation:none;transform:none}.maiq-team-marquee{overflow-x:auto;scrollbar-width:none}.maiq-team-marquee::-webkit-scrollbar{display:none}}
+@media (prefers-reduced-motion:reduce){
+  .maiq-model-pilares-bg::before,.maiq-model-pilares-bg::after{animation:none}
+}
+/* animações suspensas enquanto o bloco está fora da tela */
+.maiq-anim-off [data-maiq-anim],
+.maiq-anim-off::before,
+.maiq-anim-off::after{animation-play-state:paused!important}
+@keyframes maiqPathA{0%{transform:translate3d(72.042%,37.639%,0)}0.8333%{transform:translate3d(72.681%,39.718%,0)}1.6667%{transform:translate3d(73.268%,41.863%,0)}2.5000%{transform:translate3d(73.810%,44.119%,0)}3.3333%{transform:translate3d(74.305%,46.524%,0)}4.1667%{transform:translate3d(74.745%,49.110%,0)}5%{transform:translate3d(75.110%,51.905%,0)}5.8333%{transform:translate3d(75.377%,54.927%,0)}6.6667%{transform:translate3d(75.510%,58.187%,0)}7.5000%{transform:translate3d(75.467%,61.685%,0)}8.3333%{transform:translate3d(75.197%,65.404%,0)}9.1667%{transform:translate3d(74.646%,69.318%,0)}10%{transform:translate3d(73.751%,73.378%,0)}10.8333%{transform:translate3d(72.451%,77.519%,0)}11.6667%{transform:translate3d(70.684%,81.655%,0)}12.5000%{transform:translate3d(68.393%,85.678%,0)}13.3333%{transform:translate3d(65.534%,89.460%,0)}14.1667%{transform:translate3d(62.077%,92.855%,0)}15%{transform:translate3d(58.012%,95.703%,0)}15.8333%{transform:translate3d(53.357%,97.837%,0)}16.6667%{transform:translate3d(48.160%,99.087%,0)}17.5000%{transform:translate3d(42.507%,99.295%,0)}18.3333%{transform:translate3d(36.515%,98.323%,0)}19.1667%{transform:translate3d(30.341%,96.065%,0)}20%{transform:translate3d(24.170%,92.459%,0)}20.8333%{transform:translate3d(18.215%,87.497%,0)}21.6667%{transform:translate3d(12.705%,81.232%,0)}22.5000%{transform:translate3d(7.873%,73.783%,0)}23.3333%{transform:translate3d(3.943%,65.336%,0)}24.1667%{transform:translate3d(1.115%,56.139%,0)}25%{transform:translate3d(-0.446%,46.494%,0)}25.8333%{transform:translate3d(-0.628%,36.740%,0)}26.6667%{transform:translate3d(0.624%,27.239%,0)}27.5000%{transform:translate3d(3.296%,18.357%,0)}28.3333%{transform:translate3d(7.304%,10.439%,0)}29.1667%{transform:translate3d(12.496%,3.789%,0)}30%{transform:translate3d(18.658%,-1.346%,0)}30.8333%{transform:translate3d(25.525%,-4.799%,0)}31.6667%{transform:translate3d(32.795%,-6.493%,0)}32.5000%{transform:translate3d(40.149%,-6.443%,0)}33.3333%{transform:translate3d(47.270%,-4.763%,0)}34.1667%{transform:translate3d(53.863%,-1.655%,0)}35%{transform:translate3d(59.678%,2.607%,0)}35.8333%{transform:translate3d(64.523%,7.695%,0)}36.6667%{transform:translate3d(68.275%,13.251%,0)}37.5000%{transform:translate3d(70.891%,18.917%,0)}38.3333%{transform:translate3d(72.399%,24.360%,0)}39.1667%{transform:translate3d(72.899%,29.293%,0)}40%{transform:translate3d(72.541%,33.495%,0)}40.8333%{transform:translate3d(71.517%,36.819%,0)}41.6667%{transform:translate3d(70.037%,39.195%,0)}42.5000%{transform:translate3d(68.315%,40.628%,0)}43.3333%{transform:translate3d(66.549%,41.183%,0)}44.1667%{transform:translate3d(64.913%,40.974%,0)}45%{transform:translate3d(63.550%,40.147%,0)}45.8333%{transform:translate3d(62.562%,38.862%,0)}46.6667%{transform:translate3d(62.017%,37.280%,0)}47.5000%{transform:translate3d(61.953%,35.549%,0)}48.3333%{transform:translate3d(62.375%,33.797%,0)}49.1667%{transform:translate3d(63.273%,32.125%,0)}50%{transform:translate3d(64.619%,30.605%,0)}50.8333%{transform:translate3d(66.377%,29.282%,0)}51.6667%{transform:translate3d(68.508%,28.175%,0)}52.5000%{transform:translate3d(70.972%,27.276%,0)}53.3333%{transform:translate3d(73.731%,26.560%,0)}54.1667%{transform:translate3d(76.751%,25.987%,0)}55%{transform:translate3d(80.000%,25.500%,0)}55.8333%{transform:translate3d(83.451%,25.045%,0)}56.6667%{transform:translate3d(87.071%,24.610%,0)}57.5000%{transform:translate3d(90.824%,24.193%,0)}58.3333%{transform:translate3d(94.676%,23.792%,0)}59.1667%{transform:translate3d(98.593%,23.406%,0)}60%{transform:translate3d(102.544%,23.033%,0)}60.8333%{transform:translate3d(106.498%,22.672%,0)}61.6667%{transform:translate3d(110.427%,22.322%,0)}62.5000%{transform:translate3d(114.304%,21.981%,0)}63.3333%{transform:translate3d(118.104%,21.649%,0)}64.1667%{transform:translate3d(121.806%,21.324%,0)}65%{transform:translate3d(125.390%,21.005%,0)}65.8333%{transform:translate3d(128.837%,20.692%,0)}66.6667%{transform:translate3d(132.134%,20.384%,0)}67.5000%{transform:translate3d(135.267%,20.080%,0)}68.3333%{transform:translate3d(138.227%,19.781%,0)}69.1667%{transform:translate3d(141.007%,19.486%,0)}70%{transform:translate3d(143.600%,19.195%,0)}70.8333%{transform:translate3d(146.004%,18.909%,0)}71.6667%{transform:translate3d(148.218%,18.626%,0)}72.5000%{transform:translate3d(150.244%,18.347%,0)}73.3333%{transform:translate3d(152.084%,18.073%,0)}74.1667%{transform:translate3d(153.743%,17.805%,0)}75%{transform:translate3d(155.227%,17.541%,0)}75.8333%{transform:translate3d(156.545%,17.284%,0)}76.6667%{transform:translate3d(157.703%,17.033%,0)}77.5000%{transform:translate3d(158.712%,16.790%,0)}78.3333%{transform:translate3d(159.583%,16.554%,0)}79.1667%{transform:translate3d(160.326%,16.327%,0)}80%{transform:translate3d(160.951%,16.108%,0)}80.8333%{transform:translate3d(161.471%,15.900%,0)}81.6667%{transform:translate3d(161.896%,15.701%,0)}82.5000%{transform:translate3d(162.238%,15.512%,0)}83.3333%{transform:translate3d(162.507%,15.335%,0)}84.1667%{transform:translate3d(162.713%,15.169%,0)}85%{transform:translate3d(162.866%,15.014%,0)}85.8333%{transform:translate3d(162.975%,14.871%,0)}86.6667%{transform:translate3d(163.048%,14.740%,0)}87.5000%{transform:translate3d(163.093%,14.621%,0)}88.3333%{transform:translate3d(163.115%,14.514%,0)}89.1667%{transform:translate3d(163.122%,14.419%,0)}90%{transform:translate3d(163.117%,14.335%,0)}90.8333%{transform:translate3d(163.104%,14.262%,0)}91.6667%{transform:translate3d(163.088%,14.200%,0)}92.5000%{transform:translate3d(163.070%,14.148%,0)}93.3333%{transform:translate3d(163.053%,14.106%,0)}94.1667%{transform:translate3d(163.038%,14.072%,0)}95%{transform:translate3d(163.025%,14.046%,0)}95.8333%{transform:translate3d(163.015%,14.027%,0)}96.6667%{transform:translate3d(163.008%,14.014%,0)}97.5000%{transform:translate3d(163.003%,14.006%,0)}98.3333%{transform:translate3d(163.001%,14.002%,0)}99.1667%{transform:translate3d(163.000%,14.000%,0)}100%{transform:translate3d(163.000%,14.000%,0)}}
+@keyframes maiqPathB{0%{transform:translate3d(-4.042%,62.361%,0)}0.8333%{transform:translate3d(-4.680%,60.282%,0)}1.6667%{transform:translate3d(-5.261%,58.133%,0)}2.5000%{transform:translate3d(-5.786%,55.868%,0)}3.3333%{transform:translate3d(-6.248%,53.448%,0)}4.1667%{transform:translate3d(-6.635%,50.835%,0)}5%{transform:translate3d(-6.924%,48.001%,0)}5.8333%{transform:translate3d(-7.085%,44.926%,0)}6.6667%{transform:translate3d(-7.081%,41.596%,0)}7.5000%{transform:translate3d(-6.865%,38.011%,0)}8.3333%{transform:translate3d(-6.387%,34.183%,0)}9.1667%{transform:translate3d(-5.586%,30.140%,0)}10%{transform:translate3d(-4.402%,25.926%,0)}10.8333%{transform:translate3d(-2.770%,21.607%,0)}11.6667%{transform:translate3d(-0.628%,17.267%,0)}12.5000%{transform:translate3d(2.079%,13.012%,0)}13.3333%{transform:translate3d(5.397%,8.970%,0)}14.1667%{transform:translate3d(9.354%,5.284%,0)}15%{transform:translate3d(13.957%,2.114%,0)}15.8333%{transform:translate3d(19.187%,-0.373%,0)}16.6667%{transform:translate3d(24.991%,-2.010%,0)}17.5000%{transform:translate3d(31.284%,-2.639%,0)}18.3333%{transform:translate3d(37.942%,-2.123%,0)}19.1667%{transform:translate3d(44.807%,-0.356%,0)}20%{transform:translate3d(51.687%,2.723%,0)}20.8333%{transform:translate3d(58.367%,7.122%,0)}21.6667%{transform:translate3d(64.614%,12.787%,0)}22.5000%{transform:translate3d(70.191%,19.598%,0)}23.3333%{transform:translate3d(74.870%,27.369%,0)}24.1667%{transform:translate3d(78.448%,35.852%,0)}25%{transform:translate3d(80.756%,44.747%,0)}25.8333%{transform:translate3d(81.681%,53.712%,0)}26.6667%{transform:translate3d(81.165%,62.387%,0)}27.5000%{transform:translate3d(79.223%,70.406%,0)}28.3333%{transform:translate3d(75.937%,77.426%,0)}29.1667%{transform:translate3d(71.461%,83.140%,0)}30%{transform:translate3d(66.011%,87.306%,0)}30.8333%{transform:translate3d(59.856%,89.756%,0)}31.6667%{transform:translate3d(53.300%,90.414%,0)}32.5000%{transform:translate3d(46.670%,89.298%,0)}33.3333%{transform:translate3d(40.290%,86.522%,0)}34.1667%{transform:translate3d(34.461%,82.289%,0)}35%{transform:translate3d(29.446%,76.877%,0)}35.8333%{transform:translate3d(25.446%,70.615%,0)}36.6667%{transform:translate3d(22.595%,63.863%,0)}37.5000%{transform:translate3d(20.953%,56.982%,0)}38.3333%{transform:translate3d(20.504%,50.306%,0)}39.1667%{transform:translate3d(21.166%,44.127%,0)}40%{transform:translate3d(22.804%,38.667%,0)}40.8333%{transform:translate3d(25.245%,34.076%,0)}41.6667%{transform:translate3d(28.298%,30.427%,0)}42.5000%{transform:translate3d(31.767%,27.719%,0)}43.3333%{transform:translate3d(35.474%,25.889%,0)}44.1667%{transform:translate3d(39.265%,24.826%,0)}45%{transform:translate3d(43.019%,24.388%,0)}45.8333%{transform:translate3d(46.650%,24.418%,0)}46.6667%{transform:translate3d(50.112%,24.759%,0)}47.5000%{transform:translate3d(53.387%,25.264%,0)}48.3333%{transform:translate3d(56.485%,25.810%,0)}49.1667%{transform:translate3d(59.436%,26.299%,0)}50%{transform:translate3d(62.284%,26.660%,0)}50.8333%{transform:translate3d(65.079%,26.853%,0)}51.6667%{transform:translate3d(67.872%,26.862%,0)}52.5000%{transform:translate3d(70.717%,26.695%,0)}53.3333%{transform:translate3d(73.660%,26.381%,0)}54.1667%{transform:translate3d(76.742%,25.964%,0)}55%{transform:translate3d(80.000%,25.500%,0)}55.8333%{transform:translate3d(83.451%,25.045%,0)}56.6667%{transform:translate3d(87.071%,24.610%,0)}57.5000%{transform:translate3d(90.824%,24.193%,0)}58.3333%{transform:translate3d(94.676%,23.792%,0)}59.1667%{transform:translate3d(98.593%,23.406%,0)}60%{transform:translate3d(102.544%,23.033%,0)}60.8333%{transform:translate3d(106.498%,22.672%,0)}61.6667%{transform:translate3d(110.427%,22.322%,0)}62.5000%{transform:translate3d(114.304%,21.981%,0)}63.3333%{transform:translate3d(118.104%,21.649%,0)}64.1667%{transform:translate3d(121.806%,21.324%,0)}65%{transform:translate3d(125.390%,21.005%,0)}65.8333%{transform:translate3d(128.837%,20.692%,0)}66.6667%{transform:translate3d(132.134%,20.384%,0)}67.5000%{transform:translate3d(135.267%,20.080%,0)}68.3333%{transform:translate3d(138.227%,19.781%,0)}69.1667%{transform:translate3d(141.007%,19.486%,0)}70%{transform:translate3d(143.600%,19.195%,0)}70.8333%{transform:translate3d(146.004%,18.909%,0)}71.6667%{transform:translate3d(148.218%,18.626%,0)}72.5000%{transform:translate3d(150.244%,18.347%,0)}73.3333%{transform:translate3d(152.084%,18.073%,0)}74.1667%{transform:translate3d(153.743%,17.805%,0)}75%{transform:translate3d(155.227%,17.541%,0)}75.8333%{transform:translate3d(156.545%,17.284%,0)}76.6667%{transform:translate3d(157.703%,17.033%,0)}77.5000%{transform:translate3d(158.712%,16.790%,0)}78.3333%{transform:translate3d(159.583%,16.554%,0)}79.1667%{transform:translate3d(160.326%,16.327%,0)}80%{transform:translate3d(160.951%,16.108%,0)}80.8333%{transform:translate3d(161.471%,15.900%,0)}81.6667%{transform:translate3d(161.896%,15.701%,0)}82.5000%{transform:translate3d(162.238%,15.512%,0)}83.3333%{transform:translate3d(162.507%,15.335%,0)}84.1667%{transform:translate3d(162.713%,15.169%,0)}85%{transform:translate3d(162.866%,15.014%,0)}85.8333%{transform:translate3d(162.975%,14.871%,0)}86.6667%{transform:translate3d(163.048%,14.740%,0)}87.5000%{transform:translate3d(163.093%,14.621%,0)}88.3333%{transform:translate3d(163.115%,14.514%,0)}89.1667%{transform:translate3d(163.122%,14.419%,0)}90%{transform:translate3d(163.117%,14.335%,0)}90.8333%{transform:translate3d(163.104%,14.262%,0)}91.6667%{transform:translate3d(163.088%,14.200%,0)}92.5000%{transform:translate3d(163.070%,14.148%,0)}93.3333%{transform:translate3d(163.053%,14.106%,0)}94.1667%{transform:translate3d(163.038%,14.072%,0)}95%{transform:translate3d(163.025%,14.046%,0)}95.8333%{transform:translate3d(163.015%,14.027%,0)}96.6667%{transform:translate3d(163.008%,14.014%,0)}97.5000%{transform:translate3d(163.003%,14.006%,0)}98.3333%{transform:translate3d(163.001%,14.002%,0)}99.1667%{transform:translate3d(163.000%,14.000%,0)}100%{transform:translate3d(163.000%,14.000%,0)}}
+@keyframes maiqExA{0%,100%{transform:translateX(0vw)}}
+@keyframes maiqEyA{0%,100%{transform:translateY(0vw)}}
+@keyframes maiqExB{0%,100%{transform:translateX(0vw)}}
+@keyframes maiqEyB{0%,100%{transform:translateY(0vw)}}
+@keyframes maiqBodyA{0%{transform:scale(4.650)}2.222%{transform:scale(4.648)}4.444%{transform:scale(4.634)}6.667%{transform:scale(4.599)}8.889%{transform:scale(4.537)}11.111%{transform:scale(4.445)}13.333%{transform:scale(4.320)}15.556%{transform:scale(4.163)}17.778%{transform:scale(3.977)}20%{transform:scale(3.764)}22.222%{transform:scale(3.531)}24.444%{transform:scale(3.281)}26.667%{transform:scale(3.023)}28.889%{transform:scale(2.762)}31.111%{transform:scale(2.505)}33.333%{transform:scale(2.259)}35.556%{transform:scale(2.030)}37.778%{transform:scale(1.824)}40%{transform:scale(1.645)}42.222%{transform:scale(1.496)}44.444%{transform:scale(1.379)}46.667%{transform:scale(1.294)}48.889%{transform:scale(1.240)}51.111%{transform:scale(1.211)}53.333%{transform:scale(1.201)}55.556%{transform:scale(1.200)}57.778%{transform:scale(1.214)}60%{transform:scale(1.282)}62.222%{transform:scale(1.400)}64.444%{transform:scale(1.492)}66.667%{transform:scale(1.509)}68.889%{transform:scale(1.502)}71.111%{transform:scale(1.595)}73.333%{transform:scale(1.860)}75.556%{transform:scale(2.272)}77.778%{transform:scale(2.763)}80%{transform:scale(3.241)}82.222%{transform:scale(3.622)}84.444%{transform:scale(3.850)}86.667%{transform:scale(3.923)}88.889%{transform:scale(3.885)}91.111%{transform:scale(3.811)}93.333%{transform:scale(3.778)}95.556%{transform:scale(3.835)}97.778%{transform:scale(3.987)}100%{transform:scale(4.200)}}
+@keyframes maiqBodyB{0%{transform:scale(4.440)}2.222%{transform:scale(4.438)}4.444%{transform:scale(4.425)}6.667%{transform:scale(4.392)}8.889%{transform:scale(4.334)}11.111%{transform:scale(4.247)}13.333%{transform:scale(4.130)}15.556%{transform:scale(3.983)}17.778%{transform:scale(3.808)}20%{transform:scale(3.608)}22.222%{transform:scale(3.389)}24.444%{transform:scale(3.155)}26.667%{transform:scale(2.912)}28.889%{transform:scale(2.667)}31.111%{transform:scale(2.426)}33.333%{transform:scale(2.195)}35.556%{transform:scale(1.980)}37.778%{transform:scale(1.786)}40%{transform:scale(1.618)}42.222%{transform:scale(1.478)}44.444%{transform:scale(1.368)}46.667%{transform:scale(1.289)}48.889%{transform:scale(1.237)}51.111%{transform:scale(1.210)}53.333%{transform:scale(1.201)}55.556%{transform:scale(1.200)}57.778%{transform:scale(1.214)}60%{transform:scale(1.286)}62.222%{transform:scale(1.407)}64.444%{transform:scale(1.496)}66.667%{transform:scale(1.499)}68.889%{transform:scale(1.473)}71.111%{transform:scale(1.551)}73.333%{transform:scale(1.813)}75.556%{transform:scale(2.231)}77.778%{transform:scale(2.734)}80%{transform:scale(3.224)}82.222%{transform:scale(3.609)}84.444%{transform:scale(3.832)}86.667%{transform:scale(3.889)}88.889%{transform:scale(3.830)}91.111%{transform:scale(3.736)}93.333%{transform:scale(3.691)}95.556%{transform:scale(3.747)}97.778%{transform:scale(3.910)}100%{transform:scale(4.140)}}
+@keyframes maiqHaloScaleA{0%{transform:scale(0.450)}2.222%{transform:scale(0.450)}4.444%{transform:scale(0.452)}6.667%{transform:scale(0.456)}8.889%{transform:scale(0.462)}11.111%{transform:scale(0.468)}13.333%{transform:scale(0.474)}15.556%{transform:scale(0.478)}17.778%{transform:scale(0.480)}20%{transform:scale(0.480)}22.222%{transform:scale(0.481)}24.444%{transform:scale(0.485)}26.667%{transform:scale(0.495)}28.889%{transform:scale(0.508)}31.111%{transform:scale(0.522)}33.333%{transform:scale(0.535)}35.556%{transform:scale(0.545)}37.778%{transform:scale(0.549)}40%{transform:scale(0.550)}42.222%{transform:scale(0.563)}44.444%{transform:scale(0.594)}46.667%{transform:scale(0.604)}48.889%{transform:scale(0.687)}51.111%{transform:scale(1.350)}53.333%{transform:scale(2.861)}55.556%{transform:scale(4.763)}57.778%{transform:scale(5.622)}60%{transform:scale(6.846)}62.222%{transform:scale(6.643)}64.444%{transform:scale(6.074)}66.667%{transform:scale(5.567)}68.889%{transform:scale(5.293)}71.111%{transform:scale(4.979)}73.333%{transform:scale(4.460)}75.556%{transform:scale(3.964)}77.778%{transform:scale(3.469)}80%{transform:scale(2.999)}82.222%{transform:scale(2.630)}84.444%{transform:scale(2.299)}86.667%{transform:scale(2.124)}88.889%{transform:scale(2.136)}91.111%{transform:scale(2.273)}93.333%{transform:scale(2.380)}95.556%{transform:scale(2.322)}97.778%{transform:scale(2.103)}100%{transform:scale(1.943)}}
+@keyframes maiqHaloScaleB{0%{transform:scale(0.430)}2.222%{transform:scale(0.430)}4.444%{transform:scale(0.432)}6.667%{transform:scale(0.436)}8.889%{transform:scale(0.442)}11.111%{transform:scale(0.448)}13.333%{transform:scale(0.454)}15.556%{transform:scale(0.458)}17.778%{transform:scale(0.460)}20%{transform:scale(0.460)}22.222%{transform:scale(0.461)}24.444%{transform:scale(0.465)}26.667%{transform:scale(0.475)}28.889%{transform:scale(0.488)}31.111%{transform:scale(0.502)}33.333%{transform:scale(0.515)}35.556%{transform:scale(0.525)}37.778%{transform:scale(0.529)}40%{transform:scale(0.530)}42.222%{transform:scale(0.543)}44.444%{transform:scale(0.574)}46.667%{transform:scale(0.584)}48.889%{transform:scale(0.667)}51.111%{transform:scale(1.293)}53.333%{transform:scale(2.747)}55.556%{transform:scale(4.613)}57.778%{transform:scale(5.441)}60%{transform:scale(6.608)}62.222%{transform:scale(6.398)}64.444%{transform:scale(5.864)}66.667%{transform:scale(5.428)}68.889%{transform:scale(5.233)}71.111%{transform:scale(4.960)}73.333%{transform:scale(4.370)}75.556%{transform:scale(3.789)}77.778%{transform:scale(3.310)}80%{transform:scale(2.920)}82.222%{transform:scale(2.626)}84.444%{transform:scale(2.412)}86.667%{transform:scale(2.206)}88.889%{transform:scale(2.123)}91.111%{transform:scale(2.176)}93.333%{transform:scale(2.303)}95.556%{transform:scale(2.337)}97.778%{transform:scale(2.167)}100%{transform:scale(1.942)}}
+@keyframes maiqHaloA{0%{opacity:0.000}2.222%{opacity:0.015}4.444%{opacity:0.095}6.667%{opacity:0.238}8.889%{opacity:0.402}11.111%{opacity:0.532}13.333%{opacity:0.593}15.556%{opacity:0.600}17.778%{opacity:0.603}20%{opacity:0.610}22.222%{opacity:0.617}24.444%{opacity:0.620}26.667%{opacity:0.619}28.889%{opacity:0.612}31.111%{opacity:0.593}33.333%{opacity:0.561}35.556%{opacity:0.515}37.778%{opacity:0.460}40%{opacity:0.400}42.222%{opacity:0.340}44.444%{opacity:0.285}46.667%{opacity:0.239}48.889%{opacity:0.207}51.111%{opacity:0.188}53.333%{opacity:0.181}55.556%{opacity:0.180}57.778%{opacity:0.184}60%{opacity:0.201}62.222%{opacity:0.235}64.444%{opacity:0.284}66.667%{opacity:0.342}68.889%{opacity:0.403}71.111%{opacity:0.460}73.333%{opacity:0.505}75.556%{opacity:0.534}77.778%{opacity:0.548}80%{opacity:0.550}82.222%{opacity:0.544}84.444%{opacity:0.508}86.667%{opacity:0.435}88.889%{opacity:0.332}91.111%{opacity:0.218}93.333%{opacity:0.115}95.556%{opacity:0.042}97.778%{opacity:0.006}100%{opacity:0.000}}
+@keyframes maiqHaloB{0%{opacity:0.000}2.222%{opacity:0.009}4.444%{opacity:0.055}6.667%{opacity:0.147}8.889%{opacity:0.269}11.111%{opacity:0.392}13.333%{opacity:0.488}15.556%{opacity:0.539}17.778%{opacity:0.550}20%{opacity:0.552}22.222%{opacity:0.563}24.444%{opacity:0.576}26.667%{opacity:0.580}28.889%{opacity:0.579}31.111%{opacity:0.569}33.333%{opacity:0.546}35.556%{opacity:0.508}37.778%{opacity:0.457}40%{opacity:0.398}42.222%{opacity:0.336}44.444%{opacity:0.277}46.667%{opacity:0.227}48.889%{opacity:0.191}51.111%{opacity:0.169}53.333%{opacity:0.161}55.556%{opacity:0.160}57.778%{opacity:0.163}60%{opacity:0.177}62.222%{opacity:0.204}64.444%{opacity:0.245}66.667%{opacity:0.295}68.889%{opacity:0.350}71.111%{opacity:0.404}73.333%{opacity:0.451}75.556%{opacity:0.487}77.778%{opacity:0.509}80%{opacity:0.519}82.222%{opacity:0.520}84.444%{opacity:0.509}86.667%{opacity:0.461}88.889%{opacity:0.370}91.111%{opacity:0.254}93.333%{opacity:0.139}95.556%{opacity:0.052}97.778%{opacity:0.008}100%{opacity:0.000}}
+@keyframes maiqCoreA{0%{opacity:0.000}2.222%{opacity:0.000}4.444%{opacity:0.003}6.667%{opacity:0.007}8.889%{opacity:0.015}11.111%{opacity:0.024}13.333%{opacity:0.034}15.556%{opacity:0.043}17.778%{opacity:0.051}20%{opacity:0.057}22.222%{opacity:0.059}24.444%{opacity:0.060}26.667%{opacity:0.061}28.889%{opacity:0.077}31.111%{opacity:0.117}33.333%{opacity:0.187}35.556%{opacity:0.284}37.778%{opacity:0.401}40%{opacity:0.530}42.222%{opacity:0.659}44.444%{opacity:0.776}46.667%{opacity:0.873}48.889%{opacity:0.943}51.111%{opacity:0.983}53.333%{opacity:0.999}55.556%{opacity:1.000}57.778%{opacity:0.998}60%{opacity:0.988}62.222%{opacity:0.968}64.444%{opacity:0.934}66.667%{opacity:0.886}68.889%{opacity:0.825}71.111%{opacity:0.752}73.333%{opacity:0.670}75.556%{opacity:0.581}77.778%{opacity:0.488}80%{opacity:0.397}82.222%{opacity:0.309}84.444%{opacity:0.228}86.667%{opacity:0.158}88.889%{opacity:0.100}91.111%{opacity:0.056}93.333%{opacity:0.026}95.556%{opacity:0.008}97.778%{opacity:0.001}100%{opacity:0.000}}
+@keyframes maiqCoreB{0%{opacity:0.000}2.222%{opacity:0.000}4.444%{opacity:0.002}6.667%{opacity:0.005}8.889%{opacity:0.010}11.111%{opacity:0.017}13.333%{opacity:0.024}15.556%{opacity:0.032}17.778%{opacity:0.039}20%{opacity:0.044}22.222%{opacity:0.048}24.444%{opacity:0.050}26.667%{opacity:0.050}28.889%{opacity:0.052}31.111%{opacity:0.073}33.333%{opacity:0.122}35.556%{opacity:0.203}37.778%{opacity:0.313}40%{opacity:0.440}42.222%{opacity:0.573}44.444%{opacity:0.699}46.667%{opacity:0.806}48.889%{opacity:0.884}51.111%{opacity:0.931}53.333%{opacity:0.948}55.556%{opacity:0.950}57.778%{opacity:0.948}60%{opacity:0.939}62.222%{opacity:0.920}64.444%{opacity:0.888}66.667%{opacity:0.842}68.889%{opacity:0.784}71.111%{opacity:0.715}73.333%{opacity:0.636}75.556%{opacity:0.552}77.778%{opacity:0.464}80%{opacity:0.377}82.222%{opacity:0.293}84.444%{opacity:0.217}86.667%{opacity:0.150}88.889%{opacity:0.095}91.111%{opacity:0.053}93.333%{opacity:0.024}95.556%{opacity:0.008}97.778%{opacity:0.001}100%{opacity:0.000}}
+@keyframes maiqFlash{0%{opacity:0.000;transform:scale(1.200)}2.222%{opacity:0.000;transform:scale(1.200)}4.444%{opacity:0.000;transform:scale(1.200)}6.667%{opacity:0.000;transform:scale(1.200)}8.889%{opacity:0.000;transform:scale(1.200)}11.111%{opacity:0.000;transform:scale(1.200)}13.333%{opacity:0.000;transform:scale(1.200)}15.556%{opacity:0.000;transform:scale(1.200)}17.778%{opacity:0.000;transform:scale(1.200)}20%{opacity:0.000;transform:scale(1.200)}22.222%{opacity:0.000;transform:scale(1.200)}24.444%{opacity:0.000;transform:scale(1.200)}26.667%{opacity:0.000;transform:scale(1.200)}28.889%{opacity:0.000;transform:scale(1.200)}31.111%{opacity:0.000;transform:scale(1.200)}33.333%{opacity:0.000;transform:scale(1.200)}35.556%{opacity:0.000;transform:scale(1.200)}37.778%{opacity:0.000;transform:scale(1.200)}40%{opacity:0.000;transform:scale(1.200)}42.222%{opacity:0.000;transform:scale(1.200)}44.444%{opacity:0.000;transform:scale(1.200)}46.667%{opacity:0.000;transform:scale(1.200)}48.889%{opacity:0.000;transform:scale(1.200)}51.111%{opacity:0.076;transform:scale(1.338)}53.333%{opacity:0.790;transform:scale(2.622)}55.556%{opacity:1.000;transform:scale(3.001)}57.778%{opacity:0.957;transform:scale(3.128)}60%{opacity:0.821;transform:scale(3.537)}62.222%{opacity:0.631;transform:scale(4.106)}64.444%{opacity:0.472;transform:scale(4.583)}66.667%{opacity:0.404;transform:scale(4.788)}68.889%{opacity:0.399;transform:scale(4.806)}71.111%{opacity:0.373;transform:scale(4.946)}73.333%{opacity:0.305;transform:scale(5.320)}75.556%{opacity:0.211;transform:scale(5.831)}77.778%{opacity:0.126;transform:scale(6.293)}80%{opacity:0.079;transform:scale(6.552)}82.222%{opacity:0.070;transform:scale(6.600)}84.444%{opacity:0.069;transform:scale(6.616)}86.667%{opacity:0.062;transform:scale(6.696)}88.889%{opacity:0.050;transform:scale(6.852)}91.111%{opacity:0.035;transform:scale(7.054)}93.333%{opacity:0.019;transform:scale(7.255)}95.556%{opacity:0.007;transform:scale(7.408)}97.778%{opacity:0.001;transform:scale(7.486)}100%{opacity:0.000;transform:scale(7.500)}}
+@keyframes maiqStrand{0%{transform:translateX(-78px) scale(1);opacity:.5}25%{transform:translateX(0) scale(1.4);opacity:1}50%{transform:translateX(78px) scale(1);opacity:.5}75%{transform:translateX(0) scale(.68);opacity:.2}100%{transform:translateX(-78px) scale(1);opacity:.5}}
+@keyframes maiqRung{0%,100%{transform:scaleX(1);opacity:.46}50%{transform:scaleX(.04);opacity:.1}}
+@media (max-width:1040px){[data-maiq-toggle]{top:104px!important}}
+@media (max-width:1330px){[data-maiq-side-text]{display:none!important}}
+@media (max-width:930px){[data-maiq-venn]{transform:scale(.78);margin:-40px -92px}}
+@media (max-width:750px){[data-maiq-venn]{transform:scale(.62);margin:-68px -159px}}
+@media (max-width:620px){[data-maiq-venn]{transform:scale(.46);margin:-97px -226px}}
+@media (max-height:940px) and (min-width:931px){[data-maiq-venn]{transform:scale(.86);margin:-25px -59px}}
+@media (max-height:840px) and (min-width:931px){[data-maiq-venn]{transform:scale(.74);margin:-47px -109px}}
+/* "Nosso Modelo" abaixo de 760px: o Venn em px absolutos fica ilegível mesmo
+   escalado (texto de 16.8px vira ~7.7px) — abaixo desse breakpoint ele é
+   trocado por um layout empilhado em fluxo normal (dois cartões + hélice
+   reduzida + chip de interseção). Entre 760-1330px nada muda: o Venn segue
+   escalando como antes. As duas subárvores (.maiq-model-dna-row e
+   .maiq-model-mobile) ficam sempre no DOM; só a visibilidade troca por CSS,
+   sem JS de resize (mesmo padrão do SiteHeader). */
+.maiq-model-mobile{display:none}
+/* Abaixo de 760px: duas pílulas verticais sobrepostas (mesma borda e fundo
+   translúcido do Venn desktop — a interseção ganha destaque só pela soma dos
+   dois fundos) com a hélice girada 90° recortada pela interseção exata.
+   --mm-h = altura de cada pílula, --mm-o = sobreposição entre elas. */
+.maiq-model-mobile{--mm-h:440px;--mm-o:160px;--mm-r:112px;position:relative;width:100%;max-width:340px;height:calc(var(--mm-h) * 2 - var(--mm-o));margin:0 auto}
+.maiq-model-mobile-pill{position:absolute;left:0;width:100%;height:var(--mm-h);box-sizing:border-box;border:1px solid var(--p-hair,rgba(159,214,210,.14));border-radius:var(--mm-r);background:var(--p-chip-bg,rgba(159,214,210,.05))}
+.maiq-model-mobile-pill--top{top:0}
+.maiq-model-mobile-pill--bottom{top:calc(var(--mm-h) - var(--mm-o))}
+.maiq-model-mobile-clip-a{position:absolute;left:0;top:0;width:100%;height:var(--mm-h);border-radius:var(--mm-r);overflow:hidden}
+.maiq-model-mobile-clip-b{position:absolute;left:0;top:calc(var(--mm-h) - var(--mm-o));width:100%;height:var(--mm-h);border-radius:var(--mm-r);overflow:hidden}
+.maiq-model-mobile-helix{position:absolute;left:50%;top:calc(var(--mm-o) / 2);width:0;height:0}
+/* A hélice nasce vertical (240x360); girada, as barras ficam em pé e o vão
+   da máscara precisa ser largo na horizontal para o texto central. */
+.maiq-model-mobile-helix>div{
+  left:50%!important;
+  top:50%!important;
+  transform:translate(-50%,-50%) rotate(90deg) scale(.94)!important;
+  -webkit-mask-image:radial-gradient(ellipse 50px 104px at 50% 50%,transparent 0%,transparent 50%,#000 100%)!important;
+  mask-image:radial-gradient(ellipse 50px 104px at 50% 50%,transparent 0%,transparent 50%,#000 100%)!important;
+}
+.maiq-model-mobile-content{position:absolute;left:0;width:100%;height:calc(var(--mm-h) - var(--mm-o));box-sizing:border-box;display:flex;flex-direction:column;align-items:center;text-align:center}
+.maiq-model-mobile-content--top{top:0;justify-content:flex-end;padding-bottom:14px}
+.maiq-model-mobile-content--bottom{top:var(--mm-h);justify-content:flex-start;padding-top:14px}
+.maiq-model-mobile-card-title{font-size:24px;line-height:1.1;font-weight:600;letter-spacing:-.012em;color:var(--p-text,#FFFFFF)}
+.maiq-model-mobile-card-sub{font-size:14.5px;font-weight:600;margin-top:8px;color:var(--p-text,#FFFFFF)}
+.maiq-model-mobile-card-tag{font-size:12.5px;font-style:italic;color:var(--p-muted,#9FD6D2);margin-top:2px}
+.maiq-model-mobile-list{list-style:none;width:80%;margin:18px 0 0;padding:0}
+.maiq-model-mobile-list li{padding:11px 0;background:linear-gradient(90deg,transparent 0%,var(--p-hair,rgba(159,214,210,.14)) 18%,var(--p-hair,rgba(159,214,210,.14)) 82%,transparent 100%) top/100% 1px no-repeat;font-size:15.5px;color:var(--p-text-2,#AFE3E0)}
+.maiq-model-mobile-center{position:absolute;left:50%;top:calc(var(--mm-h) - var(--mm-o) / 2);transform:translate(-50%,-50%);z-index:1;font-size:14px;line-height:1.34;font-weight:600;letter-spacing:.01em;color:var(--p-text,#FFFFFF);text-align:center;white-space:nowrap;text-shadow:0 0 12px var(--p-bg),0 0 4px var(--p-bg)}
+@media (max-width:760px){
+  .maiq-model-dna-row{display:none!important}
+  .maiq-model-mobile{display:block}
+}
+@keyframes maiqRingSweep{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+.maiq-cycle-frame{--cycle-label-width:202px;isolation:isolate}
+.maiq-cycle-scroll{position:relative;display:flex;flex:1 1 auto;min-width:0;height:100%;align-items:center;overflow:hidden;outline:none;scrollbar-width:none;-ms-overflow-style:none;cursor:default;touch-action:pan-y}
+.maiq-cycle-scroll::-webkit-scrollbar{width:0;height:0}
+.maiq-cycle-scroll[data-scrollable="true"]{cursor:grab}
+.maiq-cycle-scroll[data-scrollable="true"][data-dragging="true"]{cursor:grabbing;user-select:none}
+.maiq-cycle-lanes{display:none;position:relative;flex:0 0 var(--cycle-label-width);align-self:center;z-index:2;color:var(--c-lane-fg);overflow:hidden}
+.maiq-cycle-lanes::after{content:"";position:absolute;z-index:2;right:0;top:2%;bottom:2%;width:1px;background:linear-gradient(180deg,transparent,var(--c-dot) 16%,var(--c-dot) 84%,transparent)}
+.maiq-cycle-lane-separators{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.maiq-cycle-lane{position:absolute;left:4.3%;width:100%;height:52px;transform:translateY(-50%);display:flex;align-items:center;justify-content:center;gap:10px;font-size:18px;font-weight:500}
+.maiq-cycle-lane>svg{flex:0 0 auto}
+.maiq-cycle-drag-hint{display:none;position:absolute;z-index:4;left:50%;bottom:8px;align-items:center;gap:5px;transform:translateX(-50%);padding:5px 8px;color:var(--p-muted);font-size:11px;font-weight:500;white-space:nowrap;pointer-events:none;background:color-mix(in oklab,var(--c-frame-bg) 88%,var(--p-bg));border-radius:999px;box-shadow:0 0 12px color-mix(in oklab,var(--p-bg) 55%,transparent)}
+.maiq-cycle-drag-hint svg{flex:0 0 auto}
+@media (max-width:600px){.maiq-cycle-frame{--cycle-label-width:148px}.maiq-cycle-lane{gap:8px;font-size:14px}.maiq-cycle-lane>svg{width:18px;height:18px}.maiq-cycle-drag-hint{bottom:7px;font-size:10px}}
+@keyframes maiqNodePulse{0%{opacity:0}16%{opacity:var(--pulse-peak,.9)}100%{opacity:0}}
+/* "Nossa Perspectiva" abaixo de 760px: o diagrama (mesmo recortado, com
+   rolagem horizontal) fica baixo demais para ser legível. Nesse tier ele dá
+   lugar a um losango com as 4 pílulas (ícone + nome de cada raia) nos
+   vértices, ligadas por um laço decorativo com dois pontos luminosos em loop
+   contínuo (posição por %, sem JS), e um botão central para abrir o fluxo
+   completo em tela cheia (modal). Mesmo padrão de duas subárvores sempre no
+   DOM do "Nosso Modelo": só a visibilidade troca por CSS. */
+.maiq-cycle-mobile{display:none}
+/* Ciclo compacto mobile: geometria fixa 342x360 escalada por --flow-k (JS,
+   ResizeObserver). O ponto vem antes das pílulas no DOM para passar por trás
+   delas; o pulso é só a opacidade de um overlay (animada por rAF). */
+.maiq-cycle-flow-wrap{--flow-k:1;position:relative;width:100%;max-width:342px;height:calc(360px * var(--flow-k));margin:0 auto}
+.maiq-cycle-flow{position:absolute;left:0;top:0;width:342px;height:360px;transform:scale(var(--flow-k));transform-origin:0 0}
+.maiq-cycle-flow-path{position:absolute;inset:0;overflow:visible;pointer-events:none}
+.maiq-cycle-flow-path path{fill:none;stroke:var(--c-fp-path);stroke-width:1}
+.maiq-cycle-flow-dot{position:absolute;left:0;top:0;width:8px;height:8px;border-radius:50%;background:var(--c-fp-dot);box-shadow:0 0 10px 3px var(--c-fp-dot-glow);pointer-events:none;will-change:transform;transform:translate(64px,20px)}
+.maiq-cycle-flow-list{position:absolute;inset:0;margin:0;padding:0;list-style:none;pointer-events:none}
+.maiq-cycle-flow-pill{position:absolute;box-sizing:border-box;display:flex;align-items:center;justify-content:center;gap:8px;width:136px;height:48px;padding:0 14px;border-radius:24px;background:var(--c-fp-bg);border:1px solid var(--c-fp-hair);color:var(--p-text);font-size:15px;font-weight:600;white-space:nowrap;transition:background-color 320ms cubic-bezier(.2,0,0,1),border-color 320ms cubic-bezier(.2,0,0,1)}
+.maiq-cycle-flow-pill svg{flex:0 0 auto;color:var(--p-text-2)}
+.maiq-cycle-flow-pill[data-active="true"]{background:var(--c-fp-bg-on);border-color:var(--c-fp-hair-on)}
+.maiq-cycle-flow-pill[data-phase="0"]{left:0;top:0}
+.maiq-cycle-flow-pill[data-phase="1"]{left:206px;top:0}
+.maiq-cycle-flow-pill[data-phase="2"]{left:206px;top:312px}
+.maiq-cycle-flow-pill[data-phase="3"]{left:0;top:312px}
+.maiq-cycle-flow-pill-glow{position:absolute;inset:-1px;border-radius:24px;border:1px solid var(--c-fp-glow-edge);box-shadow:0 0 24px 2px var(--c-fp-glow),inset 0 0 14px var(--c-fp-glow-in);opacity:0;pointer-events:none;will-change:opacity}
+.maiq-cycle-flow-cta{position:absolute;left:76px;top:72px;width:190px;height:216px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;margin:0;padding:0;border:0;background:none;color:var(--p-text);font:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.maiq-cycle-flow-cta-circle{position:relative;display:flex;align-items:center;justify-content:center;width:76px;height:76px;border-radius:50%;background:var(--c-fp-btn-bg);border:1px solid var(--c-fp-hair-on);color:var(--c-fp-btn-icon);box-shadow:var(--c-fp-btn-shadow);transition:background-color 200ms cubic-bezier(.2,0,0,1)}
+.maiq-cycle-flow-cta:hover .maiq-cycle-flow-cta-circle{background:var(--c-fp-bg-on)}
+.maiq-cycle-flow-cta:active .maiq-cycle-flow-cta-circle{transform:translateY(1px)}
+.maiq-cycle-flow-cta:focus-visible{outline:none}
+.maiq-cycle-flow-cta:focus-visible .maiq-cycle-flow-cta-circle{box-shadow:var(--c-fp-btn-shadow),var(--glow-focus)}
+.maiq-cycle-flow-cta-glow{position:absolute;inset:-1px;border-radius:50%;border:1px solid var(--c-fp-glow-edge);box-shadow:0 0 20px 2px var(--c-fp-glow);opacity:0;pointer-events:none;will-change:opacity}
+.maiq-cycle-flow-cta-label{font-size:15px;font-weight:600;color:var(--p-text)}
+@media (prefers-reduced-motion:reduce){.maiq-cycle-flow-dot{display:none}}
+@media (max-width:760px), (orientation:landscape) and (max-height:500px) and (pointer:coarse){
+  .maiq-cycle-frame{display:none!important}
+  .maiq-cycle-mobile{display:flex;flex-direction:column;align-items:center;width:calc(100% + 48px);margin:0 -24px}
+}
+/* Modal de tela cheia do fluxo completo (mobile). Mesmo padrão de
+   .maiq-conviction-modal/.maiq-platform-modal, incluindo a rotação via CSS
+   em celular portrait — ver comentário equivalente em .maiq-platform-modal. */
+.maiq-cycle-modal{position:fixed;z-index:71;inset:clamp(18px,4vw,54px);max-width:1440px;max-height:calc(100vh - clamp(36px,8vw,108px));margin:auto;padding:0;overflow:hidden;border:1px solid var(--p-hair-strong);border-radius:var(--radius-lg);background:var(--p-bg-deep);box-shadow:var(--shadow-3);color:var(--p-text);animation:maiqPlatformModalIn 260ms var(--ease-out)}
+.maiq-cycle-modal-media{--cycle-label-width:202px;position:relative;width:100%;height:100%;display:flex;align-items:center;overflow:hidden;background:var(--p-bg-deep);padding:16px;box-sizing:border-box}
+.maiq-cycle-modal-close{position:absolute;top:12px;right:12px;z-index:2}
+@media (max-width:800px){
+  .maiq-cycle-modal{inset:10px;max-height:calc(100vh - 20px);border-radius:var(--radius-md)}
+}
+/* Celular deitado: o fluxo completo já cabe na horizontal, só ocupa a tela toda. */
+@media (orientation:landscape) and (max-height:500px) and (pointer:coarse){
+  .maiq-cycle-modal{inset:0;max-width:none;max-height:none;margin:0;border:none;border-radius:0}
+}
+@media (max-width:800px) and (orientation:portrait){
+  .maiq-cycle-modal{inset:0;max-width:none;max-height:none;margin:0;border:none;border-radius:0}
+  .maiq-cycle-modal-media{position:absolute;top:50%;left:50%;width:100vh;width:100dvh;height:100vw;transform:translate(-50%,-50%) rotate(90deg)}
+}
+@media (prefers-reduced-motion:reduce){.maiq-cycle-modal{animation:none}}
+[data-maiq-scope]{--c-block-bg:rgba(159,214,210,.07);--c-block-fg:#FFFFFF;--c-block-hair:rgba(159,214,210,.26);--c-line:rgba(159,214,210,.52);--c-dot:rgba(159,214,210,.42);--c-band:#308984;--c-band-fg:#FFFFFF;--c-pill:#1F5956;--c-pill-fg:#FFFFFF;--c-exit:#9FD6D2;--c-exit-fg:#143937;--c-flow:#DFF4F3;--c-flow-core:#F4F8F4;--c-flow-blend:screen;--c-lane-bg:rgba(48,137,132,.46);--c-lane-hair:rgba(159,214,210,.46);--c-lane-fg:#FFFFFF;--c-sep:rgba(159,214,210,.30);--c-frame-bg:rgba(159,214,210,.04);--c-fp-bg:#17403E;--c-fp-bg-on:#1F5956;--c-fp-hair:rgba(175,227,224,.26);--c-fp-hair-on:rgba(175,227,224,.55);--c-fp-glow-edge:rgba(255,255,255,.75);--c-fp-glow:rgba(95,199,193,.45);--c-fp-glow-in:rgba(175,227,224,.16);--c-fp-path:rgba(175,227,224,.34);--c-fp-dot:#FFFFFF;--c-fp-dot-glow:rgba(223,244,243,.55);--c-fp-btn-bg:#17403E;--c-fp-btn-icon:#FFFFFF;--c-fp-btn-shadow:0 12px 24px -8px rgba(0,0,0,.6),0 2px 4px rgba(0,0,0,.3)}
+[data-maiq-scope][data-theme="claro"]{--c-block-bg:rgba(255,253,248,.55);--c-block-fg:#342316;--c-block-hair:rgba(52,35,22,.24);--c-line:rgba(104,70,43,.42);--c-dot:rgba(52,35,22,.34);--c-band:#68462B;--c-band-fg:#F6EFE2;--c-pill:#68462B;--c-pill-fg:#F6EFE2;--c-exit:#D8C9B4;--c-exit-fg:#342316;--c-flow:#8A6038;--c-flow-core:#342316;--c-flow-blend:multiply;--c-lane-bg:rgba(255,253,248,.82);--c-lane-hair:rgba(52,35,22,.42);--c-lane-fg:#342316;--c-sep:rgba(52,35,22,.30);--c-frame-bg:rgba(255,253,248,.46);--c-fp-bg:#FBF6F0;--c-fp-bg-on:#F0E2D3;--c-fp-hair:rgba(52,35,22,.22);--c-fp-hair-on:rgba(52,35,22,.48);--c-fp-glow-edge:rgba(104,70,43,.7);--c-fp-glow:rgba(138,96,56,.32);--c-fp-glow-in:rgba(138,96,56,.10);--c-fp-path:rgba(52,35,22,.28);--c-fp-dot:#68462B;--c-fp-dot-glow:rgba(138,96,56,.45);--c-fp-btn-bg:#FBF6F0;--c-fp-btn-icon:#342316;--c-fp-btn-shadow:0 12px 24px -8px rgba(52,35,22,.28),0 2px 4px rgba(52,35,22,.12)}
+@keyframes maiqPlatPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.075)}}
+@keyframes maiqPlatPulseSoft{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(1.05);opacity:1}}
+@media (max-width:1023px){[data-maiq-plat-tabs]{flex-wrap:wrap;justify-content:center}[data-maiq-plat-tab]{flex:0 0 auto!important}[data-maiq-plat-pin]{min-height:0!important;padding-top:96px!important;padding-bottom:96px!important}[data-maiq-plat-inner]{padding-top:0!important;height:auto!important;gap:40px!important}[data-maiq-plat-bar]{margin-top:0!important}[data-maiq-plat-card]{margin-top:0!important}[data-maiq-plat-spacer]{display:none!important}[data-maiq-plat-card]{grid-template-columns:minmax(0,1fr)!important;height:auto!important;width:min(100%,529px)!important}[data-maiq-plat-anim]{aspect-ratio:1/1}[data-maiq-plat-right]{border-left:0!important;border-top:1px solid var(--p-hair,rgba(234,217,204,.14))!important;min-height:300px}}
+@media (prefers-reduced-motion:reduce){[data-maiq-anim]{animation:none!important}}
+
+/* Plataforma — navegação linear e mídia controlada */
+.maiq-platform-section{position:relative;z-index:1;display:flex;min-height:100svh;align-items:center;box-sizing:border-box;scroll-margin-top:132px;padding:clamp(108px,13vh,140px) 48px}
+/* Altura curta: .maiq-platform-base é sticky ancorado no topo e nunca rola —
+   conteúdo que exceda a viewport fica inalcançável, não "abaixo da dobra".
+   Só o piso do padding cede aqui; o comportamento em telas normais não muda. */
+@media (max-height:820px){
+  .maiq-platform-section{padding:clamp(88px,13vh,140px) 48px}
+}
+.maiq-platform-section-inner{width:100%;max-width:1200px;margin:0 auto}
+.maiq-platform-heading{display:flex;flex-direction:column;align-items:center;text-align:center}
+.maiq-platform-heading h2{margin:0;color:var(--p-text);font-family:var(--font-core);font-size:clamp(38px,4.2vw,58px);font-weight:600;line-height:1.04;letter-spacing:0}
+.maiq-platform-heading>p{max-width:none;margin:14px auto 0;text-wrap:pretty}
+.maiq-platform-showcase{margin-top:clamp(44px,6vh,64px)}
+.maiq-platform-tabs-viewport{overflow-x:auto;overflow-y:hidden;padding-bottom:10px;scrollbar-width:none}
+.maiq-platform-tabs-viewport::-webkit-scrollbar{display:none}
+.maiq-platform-tabs{position:relative;width:min(100%,780px);min-width:640px;margin:0 auto;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));padding-bottom:16px}
+.maiq-platform-tab{position:relative!important;width:100%;height:44px!important;padding:0 8px 12px!important;justify-content:center!important;border:0!important;border-radius:0!important;background:transparent!important;color:var(--p-muted)!important;font-size:15px!important;font-weight:500!important;text-align:center;transition:color var(--dur-2) var(--ease-standard)!important}
+.maiq-platform-tab>span{display:inline-flex;min-height:28px;padding:4px 12px;align-items:center;justify-content:center;border-radius:999px;background:transparent;transition:background-color var(--dur-2) var(--ease-standard),color var(--dur-2) var(--ease-standard)}
+.maiq-platform-tab:hover>span,.maiq-platform-tab:focus-visible>span{background:var(--action-ghost-bg-hover);color:var(--p-text)}
+.maiq-platform-tab[data-active="true"]>span{background:color-mix(in oklab,var(--p-text) 11%,transparent);color:var(--p-text)}
+.maiq-platform-line{position:absolute;right:0;bottom:0;left:0;height:16px;overflow:visible}
+.maiq-platform-line::before{content:"";position:absolute;right:0;top:7px;left:0;height:1px;background:var(--p-hair);mask-image:linear-gradient(90deg,transparent 0,#000 3%,#000 97%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 3%,#000 97%,transparent 100%)}
+.maiq-platform-line-progress{position:absolute;top:6px;right:0;left:0;display:block;height:2px;background:var(--c-flow);filter:drop-shadow(0 0 3px var(--c-flow)) drop-shadow(0 0 7px var(--c-flow-core));mix-blend-mode:var(--c-flow-blend);mask-image:linear-gradient(90deg,transparent 0,#000 3%,#000 97%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 3%,#000 97%,transparent 100%);will-change:clip-path;transform:translateZ(0)}
+.maiq-platform-line-progress[data-settling="true"]{transition:clip-path 600ms var(--ease-out)}
+.maiq-platform-line-divider{position:absolute;z-index:2;top:50%;width:6px;height:6px;border:1px solid var(--p-divider-solid);border-radius:50%;background:var(--p-divider-solid);transform:translate(-50%,-50%);transition:background-color 180ms var(--ease-standard),border-color 180ms var(--ease-standard),box-shadow 180ms var(--ease-standard),transform 180ms var(--ease-standard)}
+.maiq-platform-line-divider[data-lit="true"]{border-color:var(--c-flow);background:var(--c-flow);box-shadow:0 0 4px 2px color-mix(in oklab,var(--c-flow) 72%,transparent),0 0 12px 5px color-mix(in oklab,var(--c-flow-core) 34%,transparent);transform:translate(-50%,-50%) scale(1.12)}
+.maiq-platform-card{width:min(100%,1058px);height:min(46vh,529px);min-height:clamp(300px,46vh,420px);margin:clamp(38px,5vh,58px) auto 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-areas:"media copy";overflow:hidden;border:1px solid var(--p-hair);border-radius:var(--radius-lg);background:var(--p-plat-veil)}
+/* Vídeos quadrados exibidos inteiros (contain): o fundo da caixa usa a mesma cor da borda
+   dos vídeos (--p-plat-video-bg), então as sobras laterais não aparecem como faixa. */
+.maiq-platform-video{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain}
+/* ≤1023px: o preview mostra só uma faixa central do vídeo (cover) em vez de uma
+   miniatura ilegível — convite para a tela cheia, onde o vídeo aparece inteiro. */
+@media (max-width:1023px){
+  .maiq-platform-media .maiq-platform-video{object-fit:cover}
+  /* Bloco descritivo centralizado no quadro (texto segue alinhado à esquerda, por causa dos marcadores) */
+  .maiq-platform-copy{justify-content:center}
+  .maiq-platform-copy-inner{width:min(100%,460px);min-width:0}
+  .maiq-platform-video[data-expandable]{cursor:zoom-in}
+}
+.maiq-platform-media{grid-area:media;position:relative;min-width:0;overflow:hidden;background:var(--p-plat-video-bg,var(--p-bg-deep))}
+.maiq-platform-copy{grid-area:copy;display:flex;align-items:center;padding:clamp(28px,6%,52px);border-left:1px solid var(--p-hair)}
+.maiq-platform-copy-inner{animation:maiqPlatformCopyIn 420ms var(--ease-out)}
+.maiq-platform-feature-name{margin:0 0 14px;color:var(--p-muted);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:var(--ls-overline)}
+.maiq-platform-copy h3,.maiq-platform-modal-copy h3{margin:0;color:var(--p-text);font-family:var(--font-core);font-size:clamp(24px,2.2vw,32px);font-weight:600;line-height:1.08;letter-spacing:0}
+.maiq-platform-copy-inner>p:last-child,.maiq-platform-modal-copy>p,.maiq-platform-modal-copy [data-radix-dialog-description]{max-width:42ch;margin:18px 0 0;color:var(--p-muted);font-size:16px;line-height:1.7;text-wrap:pretty}
+.maiq-platform-points{max-width:42ch;margin:18px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:12px}
+.maiq-platform-points li{position:relative;padding-left:18px;color:var(--p-muted);font-size:16px;line-height:1.6;text-wrap:pretty}
+.maiq-platform-points li::before{content:"";position:absolute;left:0;top:.58em;width:5px;height:5px;border-radius:50%;background:var(--p-divider-solid)}
+@keyframes maiqPlatformCopyIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.maiq-media-controls{position:absolute;z-index:4;right:16px;bottom:16px;left:16px;display:flex;justify-content:space-between;pointer-events:none}
+.maiq-media-icon-button,.maiq-platform-icon-nav{position:relative!important;width:44px!important;min-width:44px!important;height:44px!important;padding:0!important;border:1px solid var(--p-hair-strong)!important;background:var(--p-header-bg)!important;color:var(--p-text)!important;box-shadow:var(--shadow-1);backdrop-filter:blur(12px);pointer-events:auto}
+.maiq-media-icon-button>svg:not(.maiq-media-progress){position:relative;z-index:2}
+.maiq-media-progress{position:absolute;inset:-1px;width:44px;height:44px;transform:rotate(-90deg)}
+.maiq-media-progress circle{fill:none;stroke-width:2}
+.maiq-media-progress-track{stroke:var(--p-hair)}
+.maiq-media-progress-value{stroke:var(--c-flow);stroke-linecap:round;filter:drop-shadow(0 0 3px var(--c-flow-core))}
+.maiq-platform-modal-overlay{position:fixed;inset:0;z-index:70;background:color-mix(in oklab,var(--p-bg-deep) 84%,transparent);backdrop-filter:blur(12px);animation:maiqPlatformFade 220ms var(--ease-standard)}
+.maiq-platform-modal{position:fixed;z-index:71;inset:clamp(18px,4vw,54px);max-width:1440px;margin:auto;padding:0;overflow:hidden;border:1px solid var(--p-hair-strong);border-radius:var(--radius-lg);background:var(--p-card);box-shadow:var(--shadow-3);color:var(--p-text);animation:maiqPlatformModalIn 260ms var(--ease-out)}
+.maiq-platform-modal-title{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.maiq-platform-modal-layout{height:100%;display:grid;grid-template-columns:minmax(0,1.65fr) minmax(300px,.7fr)}
+.maiq-platform-modal-media{position:relative;min-height:0;overflow:hidden;background:var(--p-plat-video-bg,var(--p-bg-deep))}
+.maiq-platform-modal-copy{display:flex;flex-direction:column;justify-content:center;padding:clamp(30px,4vw,64px);border-left:1px solid var(--p-hair)}
+.maiq-platform-modal-nav{margin-top:40px;display:flex;align-items:center;gap:14px;color:var(--p-muted);font-size:13px}
+.maiq-platform-rotate-hint{
+  position:absolute;
+  z-index:3;
+  top:16px;
+  left:50%;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 14px;
+  transform:translateX(-50%);
+  border-radius:var(--radius-pill,999px);
+  background:var(--p-bg-deep,#09201F);
+  color:var(--p-text,#EAD9CC);
+  font-family:var(--font-core);
+  font-size:13px;
+  font-weight:var(--fw-medium,500);
+  box-shadow:var(--shadow-3);
+  opacity:0;
+  pointer-events:none;
+  transition:opacity var(--dur-2) var(--ease-standard);
+}
+.maiq-platform-rotate-hint[data-visible="true"]{opacity:1}
+@media (prefers-reduced-motion:reduce){.maiq-platform-rotate-hint{transition:none}}
+@keyframes maiqPlatformFade{from{opacity:0}to{opacity:1}}
+@keyframes maiqPlatformModalIn{from{opacity:0;transform:scale(.98)}to{opacity:1;transform:scale(1)}}
+/* Abaixo de 1024px o estágio sticky de "Nossa Plataforma" continua com
+   exatamente uma svh de altura (regra base, não sobrescrita aqui) — é a
+   mesma invariante do desktop. O cartão vira um bloco de altura fixa
+   (texto acima, faixa de mídia compacta abaixo, em vez de dirigido por
+   conteúdo): ver docs/adr/0003-nossa-plataforma-mobile-estagio-de-altura-fixa.md */
+@media (max-width:1023px){
+  .maiq-platform-section{padding:88px 24px 56px}
+  .maiq-platform-card{
+    height:clamp(320px,52svh,560px);
+    min-height:0;
+    grid-template-columns:1fr;
+    grid-template-rows:minmax(0,1fr) clamp(96px,20svh,160px);
+    grid-template-areas:"copy" "media";
+  }
+  .maiq-platform-media{aspect-ratio:auto}
+  .maiq-platform-copy{
+    align-items:flex-start;
+    min-height:0;
+    overflow-y:auto;
+    overscroll-behavior:auto;
+    border-top:1px solid var(--p-hair);
+    border-left:0;
+    scrollbar-width:thin;
+    scrollbar-color:var(--p-hair-strong) transparent;
+  }
+  .maiq-platform-copy::-webkit-scrollbar{width:6px}
+  .maiq-platform-copy::-webkit-scrollbar-track{background:transparent}
+  .maiq-platform-copy::-webkit-scrollbar-thumb{border-radius:var(--radius-pill);background:var(--p-hair-strong)}
+  .maiq-platform-modal-layout{grid-template-columns:1fr;grid-template-rows:minmax(0,1.25fr) auto}
+  .maiq-platform-modal-copy{padding:28px;border-top:1px solid var(--p-hair);border-left:0}
+  .maiq-platform-modal-copy [data-radix-dialog-description]{max-width:none}
+  .maiq-platform-modal-copy .maiq-platform-points{max-width:none}
+  .maiq-platform-modal-nav{margin-top:24px}
+}
+@media (max-width:600px){
+  .maiq-platform-section{padding-right:20px;padding-left:20px}
+  .maiq-platform-showcase{margin-top:42px}
+  .maiq-platform-tabs{width:640px;min-width:640px}
+  .maiq-platform-card{
+    margin-top:34px;
+    border-radius:var(--radius-lg);
+    height:clamp(300px,50svh,420px);
+    grid-template-rows:minmax(0,1fr) clamp(88px,16svh,130px);
+  }
+  .maiq-platform-copy{padding:28px 24px}
+  .maiq-platform-modal{inset:10px}
+  .maiq-platform-modal-layout{grid-template-rows:minmax(0,1fr) auto}
+  .maiq-platform-modal-copy{padding:22px}
+  .maiq-platform-modal-copy h3{font-size:22px}
+  .maiq-platform-modal-copy [data-radix-dialog-description]{margin-top:12px;font-size:14px;line-height:1.55}
+  .maiq-platform-modal-nav{margin-top:18px}
+}
+/* Modal de tela cheia em celular portrait: mesma técnica de
+   .maiq-conviction-modal (rotação via CSS, sem orientation.lock nativo —
+   iOS Safari não suporta). O layout interno mantém a grade de duas colunas
+   do desktop (mídia + texto lado a lado) porque, girado, a caixa fica
+   naturalmente "deitada" (width:100vh é a maior dimensão em portrait). */
+@media (max-width:800px) and (orientation:portrait){
+  .maiq-platform-modal{
+    inset:0;
+    max-width:none;
+    margin:0;
+    border:none;
+    border-radius:0;
+  }
+  .maiq-platform-modal-layout{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:100vh;
+    width:100dvh;
+    height:100vw;
+    transform:translate(-50%,-50%) rotate(90deg);
+    grid-template-columns:minmax(0,1.65fr) minmax(300px,.7fr);
+    grid-template-rows:none;
+  }
+  /* Nos 3 modais de tela cheia (Convicção/Plataforma/Perspectiva), nesse
+     estado o próprio modal vira `inset:0` opaco e cobre a tela inteira — o
+     overlay atrás fica 100% coberto, então seu `backdrop-filter` não produz
+     nenhum efeito visível. É puro custo de composição (reamostra a tela
+     inteira a cada quadro) no exato momento em que o modal está abrindo e
+     girando; desligar aqui não muda nada que se veja. */
+  .maiq-platform-modal-overlay{backdrop-filter:none}
+}
+@media (prefers-reduced-motion:reduce){
+  .maiq-platform-line-progress,.maiq-platform-line-divider,.maiq-platform-tab{transition:none!important}
+  .maiq-platform-copy-inner,.maiq-platform-modal,.maiq-platform-modal-overlay{animation:none!important}
+}
+
+/* Carregamento inicial — cobre a composição até fontes e recursos da primeira tela estarem prontos. */
+.maiq-loader{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;background:var(--p-hero-bg,#143937);opacity:1;visibility:visible;transition:opacity 520ms var(--ease-standard),visibility 520ms var(--ease-standard)}
+.maiq-loader[data-hiding="true"]{opacity:0;visibility:hidden;pointer-events:none}
+.maiq-loader-hero{width:min(760px,calc(100% - 96px));margin-left:max(48px,calc((100vw - 1200px)/2));display:flex;flex-direction:column;align-items:flex-start}
+.maiq-loader-mark{position:relative;display:block;width:clamp(112px,11vw,156px);aspect-ratio:1295/386;margin-bottom:clamp(46px,8vh,82px);animation:maiqLoaderBreathe 1.5s ease-in-out infinite}
+.maiq-loader-logo{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain;object-position:left center;transition:opacity var(--dur-3) var(--ease-out)}
+.maiq-loader-logo-night{opacity:1}
+.maiq-loader-logo-day{opacity:0}
+[data-maiq-scope][data-theme="claro"] .maiq-loader-logo-night{opacity:0}
+[data-maiq-scope][data-theme="claro"] .maiq-loader-logo-day{opacity:1}
+.maiq-loader-block{display:block;overflow:hidden;border-radius:4px;background:color-mix(in oklab,var(--p-text,#EAD9CC) 13%,transparent);position:relative}
+.maiq-loader-block::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 0%,color-mix(in oklab,var(--p-text,#EAD9CC) 20%,transparent) 48%,transparent 100%);transform:translateX(-110%);animation:maiqLoaderSweep 1.35s ease-in-out infinite}
+.maiq-loader-overline{width:112px;height:10px;margin-bottom:24px}
+.maiq-loader-line-1{width:min(680px,92%);height:clamp(34px,5.2vw,62px);margin-bottom:12px}
+.maiq-loader-line-2{width:min(520px,74%);height:clamp(34px,5.2vw,62px);margin-bottom:30px}
+.maiq-loader-body{width:min(560px,80%);height:15px;margin-bottom:42px}
+.maiq-loader-actions{display:flex;gap:12px}
+.maiq-loader-cta{width:152px;height:46px;border-radius:999px}
+.maiq-loader-cta-ghost{width:118px;background:transparent;border:1px solid var(--p-hair-strong)}
+@keyframes maiqLoaderSweep{to{transform:translateX(110%)}}
+@keyframes maiqLoaderBreathe{0%,100%{opacity:.56}50%{opacity:1}}
+@media(max-width:640px){.maiq-loader-hero{width:calc(100% - 40px);margin-left:20px}.maiq-loader-line-1{width:100%}.maiq-loader-line-2{width:78%}.maiq-loader-body{width:88%}.maiq-loader-actions{width:100%}.maiq-loader-cta{flex:1;width:auto}}
+@media(prefers-reduced-motion:reduce){.maiq-loader-mark,.maiq-loader-block::after{animation:none}}
+
+/* ============ SiteHeader (chrome compartilhado) ============ */
+.maiq-nav-item{color:inherit !important}
+.maiq-nav-item:hover,.maiq-nav-item:focus-visible{color:var(--p-text,#EAD9CC) !important}
+.maiq-site-header-brand:hover{opacity:.82}
+.maiq-site-theme-toggle:hover,.maiq-site-theme-toggle:focus-visible{border-color:var(--p-hair-strong,rgba(234,217,204,.32))}
+.maiq-site-theme-toggle:focus-visible{box-shadow:var(--glow-focus)}
+
+/* Menu compacto (<1024px): abaixo do breakpoint estrutural, o <nav> e a
+   CTA completa (ver regras de largura adiante) somem, substituídos pelo
+   gatilho de ícone único + o toggle de tema embutido. As duas subárvores
+   (desktop e compacta) ficam sempre no DOM; só o `display` muda por
+   media query — sem JS de resize decidindo layout. */
+.maiq-site-header-compact{display:none;align-items:center;gap:8px;margin-left:10px}
+.maiq-site-theme-toggle-compact,.maiq-site-menu-trigger{
+  display:flex;align-items:center;justify-content:center;
+  width:44px;height:44px;padding:0;flex:none;
+  border:1px solid var(--p-hair,rgba(234,217,204,.14));
+  border-radius:999px;
+  background:transparent;
+  color:var(--p-text,#EAD9CC);
+  cursor:pointer;
+  transition:border-color 200ms cubic-bezier(.2,0,0,1);
+}
+.maiq-site-theme-toggle-compact:hover,.maiq-site-theme-toggle-compact:focus-visible,
+.maiq-site-menu-trigger:hover,.maiq-site-menu-trigger:focus-visible{
+  border-color:var(--p-hair-strong,rgba(234,217,204,.32));
+}
+.maiq-site-theme-toggle-compact:focus-visible,.maiq-site-menu-trigger:focus-visible{box-shadow:var(--glow-focus)}
+
+/* "Entrar"/"Conta" e "Fale Conosco" só entram no menu compacto em <=430px
+   (ver media query abaixo) — entre 431 e 1024px a pílula CTA continua
+   visível ao lado do gatilho, e esses itens ficam ocultos dentro do painel. */
+.maiq-nav-dropdown-item--mobile-auth,.maiq-nav-dropdown-separator--mobile-auth{display:none}
+
+@media(max-width:1024px){
+  .maiq-site-nav{display:none !important}
+  .maiq-site-theme-toggle-wrap{display:none !important}
+  .maiq-site-header-compact{display:flex !important}
+}
+@media(max-width:640px){
+  .maiq-site-header{padding:0 8px 0 14px;height:56px;max-width:calc(100vw - 16px)}
+  .maiq-site-header-logo{margin-right:12px !important}
+}
+/* Altura curta (notebooks com a barra de favoritos aberta, ~650-820px) —
+   top/height do header e do alternador de tema são estilo inline em
+   SiteHeader.tsx, então precisam de !important para serem vencidos aqui,
+   mesmo padrão já usado acima para display:none!important em telas estreitas. */
+@media(max-height:700px){
+  .maiq-site-header{top:10px !important;height:56px !important}
+  .maiq-site-theme-toggle-wrap{top:16px !important}
+}
+@media(max-width:430px){
+  .maiq-site-header-cta{display:none !important}
+  .maiq-nav-dropdown-item--mobile-auth,.maiq-nav-dropdown-separator--mobile-auth{display:block}
+}
+@media(max-width:360px){
+  .maiq-site-header{padding:0 4px 0 10px !important}
+  .maiq-site-header-logo{margin-right:8px !important}
+  .maiq-site-header-compact{gap:6px;margin-left:6px}
+  .maiq-site-theme-toggle-compact,.maiq-site-menu-trigger{width:40px;height:40px}
+}
+
+/* ============ Insights (Artigos Autorais) ============ */
+.maiq-insights-main{max-width:1080px;margin:0 auto;padding:clamp(140px,18vh,200px) clamp(24px,5vw,48px) clamp(80px,12vh,140px)}
+.maiq-insights-head{text-align:center}
+.maiq-insights-head h2{margin:0;color:var(--p-text);font-family:var(--font-core);font-size:clamp(38px,4.2vw,58px);font-weight:600;line-height:1.04;letter-spacing:0}
+.maiq-insights-head .maiq-section-subhead{max-width:none;margin:12px auto 0}
+.maiq-insights-list{margin-top:clamp(30px,4.5vh,48px);display:flex;flex-direction:column}
+.maiq-insight-row{display:grid;grid-template-columns:64px 1fr auto;align-items:center;gap:clamp(16px,2.4vw,28px);padding:clamp(16px,2.6vh,22px) clamp(14px,2vw,22px);border-bottom:1px solid var(--p-hair,rgba(234,217,204,.14));text-decoration:none;color:var(--p-text);transition:background 200ms cubic-bezier(.2,0,0,1),color 200ms cubic-bezier(.2,0,0,1)}
+.maiq-insight-row:first-child{border-top:1px solid var(--p-hair,rgba(234,217,204,.14))}
+.maiq-insight-row:nth-child(odd){background:var(--p-chip-bg,rgba(234,217,204,.04))}
+/* Hover na cor de destaque do tema (menta no noturno, madeira no diurno); antes o
+   a:hover global pintava o título de branco, fora da paleta do tema claro. */
+.maiq-insight-row:hover{color:var(--p-text-2);background:rgba(159,214,210,.08)}
+[data-maiq-scope][data-theme="claro"] .maiq-insight-row:hover{background:rgba(52,35,22,.06)}
+.maiq-insight-icon{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid var(--p-hair,rgba(234,217,204,.14));border-radius:12px;color:var(--p-subhead);transition:color 200ms cubic-bezier(.2,0,0,1),border-color 200ms cubic-bezier(.2,0,0,1)}
+.maiq-insight-row:hover .maiq-insight-icon{color:var(--p-text-2);border-color:var(--p-hair-strong,rgba(234,217,204,.32))}
+.maiq-insight-title{font-family:var(--font-core);font-size:clamp(16px,1.5vw,20px);font-weight:500;line-height:1.35}
+.maiq-insight-date{color:var(--p-subhead);font-family:var(--font-core);font-size:14px;font-weight:500;letter-spacing:.02em;white-space:nowrap;font-variant-numeric:tabular-nums}
+@media(max-width:640px){
+  .maiq-insight-row{grid-template-columns:44px 1fr;row-gap:6px;padding:16px 12px}
+  .maiq-insight-icon{width:32px;height:32px;border-radius:10px}
+  .maiq-insight-date{grid-column:2}
+}
+
+/* ============ Páginas legais (Privacidade, Termos, Cookies) ============ */
+.maiq-legal-main{background:var(--p-bg,#0F2B2A);padding:clamp(120px,14vh,168px) clamp(24px,5vw,48px) clamp(80px,12vh,140px);transition:background 320ms cubic-bezier(.16,1,.3,1)}
+.maiq-legal{max-width:760px;margin:0 auto}
+
+.maiq-legal-title{margin:0;font-family:var(--font-core);font-size:clamp(34px,4vw,52px);font-weight:600;line-height:1.06;color:var(--p-h1,#FFFFFF)}
+.maiq-legal-version{margin-top:12px;color:var(--p-muted,#9FD6D2);font-size:15px}
+.maiq-legal-hr{margin:32px 0;border:0;border-top:1px solid var(--p-hair,rgba(234,217,204,.14))}
+
+.maiq-legal-h2{margin:44px 0 14px;font-family:var(--font-core);font-size:var(--fs-h3,24px);font-weight:600;color:var(--p-text,#EAD9CC)}
+.maiq-legal-h3{margin:26px 0 10px;font-family:var(--font-core);font-size:19px;font-weight:500;color:var(--p-text,#EAD9CC)}
+
+.maiq-legal-p{margin:0 0 16px;font-size:17px;line-height:1.7;color:var(--p-text-2,#AFE3E0)}
+.maiq-legal-p:last-child{margin-bottom:0}
+.maiq-legal-list{margin:0 0 16px;padding-left:22px;list-style:disc;font-size:17px;line-height:1.7;color:var(--p-text-2,#AFE3E0)}
+.maiq-legal-list li+li{margin-top:8px}
+
+.maiq-legal-p a,.maiq-legal-list a{color:var(--p-mark-1,#9FD6D2);text-decoration:underline;text-underline-offset:3px;transition:color 200ms cubic-bezier(.2,0,0,1)}
+.maiq-legal-p a:hover,.maiq-legal-list a:hover,.maiq-legal-p a:focus-visible,.maiq-legal-list a:focus-visible{color:var(--p-text,#EAD9CC)}
+
+.maiq-legal-footnote{margin:0;font-size:14px;color:var(--p-muted,#9FD6D2)}
+
+/* Tabela da seção "Finalidades e Base Legal" — <table> real em todas as
+   larguras; abaixo de 640px vira lista de cartões só por CSS (o thead some
+   visualmente, mas continua acessível via leitor de tela). */
+.maiq-legal-table-wrap{margin:0 0 16px}
+.maiq-legal-table{width:100%;border-collapse:collapse;font-size:16px;line-height:1.5}
+.maiq-legal-table-head th{padding:12px 14px;border-bottom:1px solid var(--p-hair-strong,rgba(234,217,204,.32));color:var(--p-text,#EAD9CC);font-weight:600;text-align:left}
+.maiq-legal-table tbody tr{border-bottom:1px solid var(--p-hair-soft,rgba(234,217,204,.12))}
+.maiq-legal-table td{padding:12px 14px;color:var(--p-text-2,#AFE3E0);vertical-align:top}
+@media(max-width:640px){
+  .maiq-legal-table-head{position:absolute;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  .maiq-legal-table,.maiq-legal-table tbody,.maiq-legal-table tr,.maiq-legal-table td{display:block;width:100%}
+  .maiq-legal-table tbody tr{padding:14px 0;border-bottom:1px solid var(--p-hair-soft,rgba(234,217,204,.12))}
+  .maiq-legal-table tbody tr:first-child{border-top:1px solid var(--p-hair-soft,rgba(234,217,204,.12))}
+  .maiq-legal-table td{padding:3px 0;border:0}
+  .maiq-legal-table td:first-child{padding-top:0;padding-bottom:8px;font-weight:600;font-size:17px;color:var(--p-text,#EAD9CC)}
+  .maiq-legal-table td:not(:first-child)::before{content:attr(data-label);display:block;margin-bottom:2px;color:var(--p-muted,#9FD6D2);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.02em}
+}
+
+/* ============ Página "Sobre nós" ============ */
+/* Único consumidor, além do MaiqButton, da camada de tokens semântica
+   (--bg-page, --text-*, --surface-card, --border-*, --highlight, --action-*)
+   — ver DESIGN.md e ADR 0002. Não usar --p-* aqui. */
+.maiq-about-main{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--bg-page) 0%,var(--bg-page) 22%,var(--bg-page-deep) 58%,var(--bg-page-deep) 100%);color:var(--text-primary);transition:background 320ms cubic-bezier(.16,1,.3,1),color 320ms cubic-bezier(.16,1,.3,1)}
+.maiq-about-identity-wrap{position:relative}
+.maiq-about-glow{position:absolute;inset:0;background:radial-gradient(70% 75% at 30% 42%,var(--border-hair) 0%,transparent 70%);pointer-events:none}
+
+.maiq-about-section{position:relative;max-width:1200px;margin:0 auto;padding:0 clamp(24px,5vw,48px);box-sizing:border-box;display:flex;flex-direction:column;gap:80px}
+.maiq-about-section:first-of-type{padding-top:clamp(140px,18vh,192px)}
+.maiq-about-section:last-of-type{padding-bottom:clamp(88px,12vh,112px)}
+.maiq-about-section+.maiq-about-section{margin-top:clamp(88px,12vh,112px)}
+.maiq-about-title{margin:0;font-family:var(--font-core);font-size:56px;line-height:1.04;letter-spacing:-.02em;font-weight:600;text-align:center;color:var(--highlight)}
+
+.maiq-about-identity-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:40px}
+
+.maiq-about-logo{flex:0 1 380px;min-width:0;display:flex;flex-direction:column;gap:20px}
+.maiq-about-logo-frame{position:relative;width:100%;aspect-ratio:1295/386}
+.maiq-about-logo-base,.maiq-about-logo-highlight{position:absolute;inset:0;-webkit-mask-position:center;-webkit-mask-size:100% 100%;-webkit-mask-repeat:no-repeat;mask-position:center;mask-size:100% 100%;mask-repeat:no-repeat}
+.maiq-about-logo-base{background:var(--border-mid)}
+.maiq-about-logo-highlight{background:var(--highlight);transition:clip-path 560ms cubic-bezier(.16,1,.3,1)}
+.maiq-about-logo-track{position:relative;height:3px;background:var(--border-hair)}
+.maiq-about-logo-indicator{position:absolute;top:0;bottom:0;background:var(--highlight);box-shadow:0 0 8px color-mix(in oklab,var(--highlight) 70%,transparent),0 0 24px color-mix(in oklab,var(--highlight) 40%,transparent);transition:left 560ms cubic-bezier(.16,1,.3,1),width 560ms cubic-bezier(.16,1,.3,1)}
+
+.maiq-about-meta{flex:0 1 auto;display:flex;align-items:stretch}
+.maiq-about-meta-col{border-left:1px solid var(--border-hair);border-image:linear-gradient(180deg,transparent,var(--border-mid) 22%,var(--border-mid) 78%,transparent) 1;display:flex;flex-direction:column;justify-content:center;gap:6px}
+.maiq-about-meta-col--pronuncia{padding:4px 40px}
+.maiq-about-meta-col--genero{padding:4px 0 4px 40px}
+.maiq-about-meta-overline{font-size:12px;letter-spacing:.06em;font-weight:500;color:var(--text-muted)}
+.maiq-about-meta-value{font-size:32px;line-height:1.1;font-weight:600;letter-spacing:-.01em;color:var(--text-primary)}
+.maiq-about-meta-note{font-size:14px;color:var(--text-muted)}
+
+.maiq-about-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.maiq-about-card{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;padding:24px 28px;border-radius:16px;border:1px solid var(--border-hair);background:transparent;transition:background 320ms cubic-bezier(.16,1,.3,1),border-color 320ms cubic-bezier(.16,1,.3,1),box-shadow 320ms cubic-bezier(.16,1,.3,1),transform 320ms cubic-bezier(.16,1,.3,1)}
+.maiq-about-card[aria-selected="true"]{border-color:var(--border-strong-c);background:var(--surface-card);transform:translateY(-2px);box-shadow:0 0 0 1px color-mix(in oklab,var(--highlight) 35%,transparent),0 0 18px color-mix(in oklab,var(--highlight) 22%,transparent),0 0 44px color-mix(in oklab,var(--highlight) 10%,transparent)}
+.maiq-about-card-acronym{font-size:40px;line-height:1;font-weight:600;letter-spacing:-.02em;color:var(--text-muted);transition:color 320ms cubic-bezier(.2,0,0,1)}
+.maiq-about-card[aria-selected="true"] .maiq-about-card-acronym{color:var(--highlight)}
+.maiq-about-card-body{display:flex;flex-direction:column;align-items:center;gap:6px}
+.maiq-about-card-name{font-size:20px;font-weight:600;line-height:1.3;color:var(--text-primary)}
+.maiq-about-card-name em{font-style:normal;text-decoration:underline;text-decoration-color:var(--border-focus);text-decoration-thickness:2px;text-underline-offset:5px}
+.maiq-about-card-desc{font-size:15px;line-height:1.55;color:var(--text-secondary);text-wrap:pretty}
+
+.maiq-about-quote{position:relative;max-width:760px;width:100%;margin:0 auto;padding:24px 0 0;box-sizing:border-box;display:flex;flex-direction:column;gap:24px}
+.maiq-about-quote-mark{position:absolute;font-size:200px;line-height:1;font-weight:600;color:var(--border-mid);user-select:none}
+.maiq-about-quote-mark--open{left:-96px;top:-40px}
+.maiq-about-quote-mark--close{right:-96px;bottom:-140px}
+.maiq-about-quote-lead{margin:0 0 8px;max-width:30ch;font-size:30px;line-height:1.3;letter-spacing:-.012em;font-weight:600;color:var(--text-primary);text-wrap:pretty}
+.maiq-about-quote-p{margin:0;font-size:19px;line-height:1.75;color:var(--text-secondary);text-wrap:pretty}
+.maiq-about-quote-highlight{margin:16px 0;padding:24px 0;font-size:22px;line-height:1.5;font-weight:600;color:var(--text-primary);border-top:1px solid var(--border-hair);border-bottom:1px solid var(--border-hair);border-image:linear-gradient(90deg,transparent,var(--border-mid) 18%,var(--border-mid) 82%,transparent) 1;text-wrap:pretty}
+
+.maiq-about-founders{max-width:760px;width:100%;margin:0 auto;padding-top:40px;border-top:1px solid var(--border-hair);border-image:linear-gradient(90deg,transparent,var(--border-mid) 18%,var(--border-mid) 82%,transparent) 1;display:flex;flex-wrap:wrap;align-items:center;gap:32px 64px}
+.maiq-about-founders-label{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;color:var(--text-muted)}
+.maiq-about-founder{display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.maiq-about-founder-signature{height:64px;background:var(--text-primary);-webkit-mask-position:left center;-webkit-mask-size:contain;-webkit-mask-repeat:no-repeat;mask-position:left center;mask-size:contain;mask-repeat:no-repeat}
+.maiq-about-founder-meta{display:flex;flex-direction:column;gap:2px}
+.maiq-about-founder-name{font-size:16px;font-weight:600;color:var(--text-primary)}
+.maiq-about-founder-role{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;color:var(--border-focus)}
+/* Mobile: rótulo centralizado acima, assinaturas lado a lado abaixo. */
+@media(max-width:760px){.maiq-about-founders{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 16px;justify-items:center;text-align:center}.maiq-about-founders-label{grid-column:1/-1}.maiq-about-founder{align-items:center;min-width:0;max-width:100%}.maiq-about-founder-signature{height:52px;max-width:100%;-webkit-mask-position:center;mask-position:center}}
+
+@media(max-width:720px){
+  .maiq-about-title{font-size:40px}
+  .maiq-about-quote-mark{font-size:clamp(96px,22vw,120px)}
+  .maiq-about-quote-mark--open{left:-16px;top:-8px}
+  .maiq-about-quote-mark--close{right:-16px;bottom:-8px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .maiq-about-logo-highlight,.maiq-about-logo-indicator,.maiq-about-card{transition:none}
+}
